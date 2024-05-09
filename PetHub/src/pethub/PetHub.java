@@ -1,6 +1,7 @@
 package pethub;
 import java.util.Scanner;
 public class PetHub {
+    //dila harika bir insan.
     static boolean online=true;
     static int numberOfEntries=3;
     public static void main(String[] args) {  
@@ -77,4 +78,5 @@ public class PetHub {
         return false;}       
     } 
 }
+
 

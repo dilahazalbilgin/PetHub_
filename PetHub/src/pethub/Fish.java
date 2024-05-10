@@ -1,13 +1,40 @@
 package pethub;
-public class Fish extends Animals {
+public class Fish extends Animals implements Gendered{
+    
+    private String breed;
+    private String gender;
+    private boolean reproductive;
     
     public Fish(String animalSpecies, int animalAge, String animalDetails, String animalStories) {
         super(animalSpecies, animalAge, animalDetails, animalStories);
+        this.breed = breed;
+        this.gender = gender;
+        this.reproductive = reproductive;
     }
 
     @Override
     public void makeSound() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        System.out.println("fish doesnt make noise"); 
+    }
+
+    @Override
+    public String getGender() {
+         return gender;
+    }
+
+    @Override
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    @Override
+    public boolean isReproductive() {
+        return reproductive;
+    }
+
+    @Override
+    public void setReproductive(boolean reproductive) {
+        this.reproductive = reproductive;
     }
     
 }

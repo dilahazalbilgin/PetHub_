@@ -1,5 +1,18 @@
 package pethub;
 public class User {
+    
+    protected String name;
+    protected String surname;
+    protected long phoneNumber;
+    
+    public User(String name,String surname,long phoneNumber){
+    this.name=name;
+    this.surname=surname;
+    this.phoneNumber=phoneNumber;       
+    }          
+    
+    //public void A(){System.out.println("aaa");}
+    
     public String getName() {
         return name;
     }
@@ -23,15 +36,11 @@ public class User {
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    protected String name;
-    protected String surname;
-    protected long phoneNumber;
     
-    public User(String name,String surname,long phoneNumber){
-    this.name=name;
-    this.surname=surname;
-    this.phoneNumber=phoneNumber;       
-    }          
-    public void A(){System.out.println("aaa");}
+    public void information(){
+        System.out.println("Name: "+name);
+        System.out.println("Surname: "+surname);
+    
+    }
     
 }

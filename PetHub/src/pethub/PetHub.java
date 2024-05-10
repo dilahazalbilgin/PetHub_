@@ -19,9 +19,18 @@ public class PetHub {
             //for(User t:b){
             //a1.informationOfAWTO();
             //}  
+            Dog d1=new Dog("d",5,"d","d","k","d,",true);
+            Cat a=new Cat("d",5,"d","d","k","d,",true);
+            Fish b=new Fish("d",5,"d","d","k","d,",true);
+            Bird c=new Bird("d",5,"d","d","k","d,",true);
+            
+            Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
+            User[] k=new User[2];
+            d.AddPost();
             
             
-            Scanner scanner= new Scanner(System.in);
+            
+           /* Scanner scanner= new Scanner(System.in);
           int num=scanner.nextInt();
           if(num==1){        
         if(online){
@@ -60,7 +69,7 @@ public class PetHub {
       // for(User a:users){
          // a.A();
        
-       //}
+       //}*/
     }
     public void SignIn(){
         }

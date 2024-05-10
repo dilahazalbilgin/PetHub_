@@ -3,22 +3,64 @@ package pethub;
 import java.util.Scanner;
 
 public class Animal_Owner extends User {
-    public Animal_Owner(String name, String surname, long phoneNumber) {
+    private Dog Dog;
+    private Cat Cat;
+    private Fish Fish;
+    private Bird Bird;
+    public Animal_Owner(String name, String surname, long phoneNumber,Dog Dog,Cat Cat,Fish Fish,Bird Bird) {
         super(name, surname, phoneNumber);    
-    }  
+        this.Dog=Dog;
+        this.Cat=Cat;
+        this.Fish=Fish;
+        this.Bird=Bird;
+        
+        
+        
+    }   
+
     public void AddPost(){
         System.out.println("Why do you want to give away your pet?: ");
         Scanner keyb=new Scanner(System.in);
         String reson=keyb.nextLine();
+        System.out.println("");
     }
-    public void AddDetail(){
-        System.out.println("Do you want a add detail?");
-        Scanner keyb=new Scanner(System.in);
-        String det=keyb.nextLine();
-        if(det=="yes"){
-            System.out.println("please write a detail");
-            String det1=keyb.nextLine();
-            System.out.println("Detail: " +det1);
-        }
-    }   
+    
+    @Override
+    public void information(){
+        super.information();
+        
+        
+    }
+    
+    public Cat getCat() {
+        return Cat;
+    }
+
+    public void setCat(Cat Cat) {
+        this.Cat = Cat;
+    }
+
+    public Fish getFish() {
+        return Fish;
+    }
+
+    public void setFish(Fish Fish) {
+        this.Fish = Fish;
+    }
+
+    public Bird getBird() {
+        return Bird;
+    }
+
+    public void setBird(Bird Bird) {
+        this.Bird = Bird;
+    }
+   
+     public Dog getDog() {
+        return Dog;
+    }
+
+    public void setDog(Dog Dog) {
+        this.Dog = Dog;
+    }  
 }

@@ -11,8 +11,6 @@ public class User {
     this.phoneNumber=phoneNumber;       
     }          
     
-    //public void A(){System.out.println("aaa");}
-    
     public String getName() {
         return name;
     }
@@ -40,7 +38,7 @@ public class User {
     public void information(){
         System.out.println("Name: "+name);
         System.out.println("Surname: "+surname);
-    
+        System.out.println("Phone Number: "+phoneNumber);
     }
     
 }

@@ -29,6 +29,13 @@ public class PetHub {
             d.AddPost();
             
             
+            Scanner keyb=new Scanner(System.in);
+            System.out.println("yes");
+            int answer=keyb.nextInt();
+            if(answer==1){
+            d.information();
+            }
+            
             
            /* Scanner scanner= new Scanner(System.in);
           int num=scanner.nextInt();

@@ -29,14 +29,11 @@ public class Animal_WantingTo_Own extends User{
             String a2=keyb.nextLine();
             System.out.println("your animals: " + a2);
         }else{System.out.println("First animalll");}
-    }
-    public void informationOfAWTO(){
-        System.out.println("your name is:"+Animal_WantingTo_Own.super.name );
-        System.out.println("your surname is:"+Animal_WantingTo_Own.super.surname );
-        System.out.println("your phone number is:"+Animal_WantingTo_Own.super.phoneNumber );
-        //System.out.println("your gender is:"+this.addOwnAnimals());
-        //System.out.println("The number of animal you own:"+Animal_WantingTo_Own.this);
     }   
+    @Override
+    public void information(){
+    super.information();
+    }
     public int getPetNumber() {
         return petNumber;
     }

@@ -15,27 +15,27 @@ public class Animal_Owner extends User {
         this.Bird=Bird;       
     }       
     public void AddPost(){
-        System.out.println("If you want add a post please press 1. ");
+        System.out.println("Do you want add a post? ");
         Scanner keyb=new Scanner(System.in);
-        int answer=keyb.nextInt();
-        if(answer==1){
+        String answer=keyb.nextLine();
+        if(answer.equals("yes")){
         System.out.println("Why do you want to give away your pet?: ");
-        String answer3=keyb.nextLine();
         String answer2=keyb.nextLine();
         
-            System.out.println("If you want to see your post , you press 6.");
-            int press=keyb.nextInt();
-            if(press==6){
-                boolean sonuc=Post(answer,answer2,press);
-                 if(sonuc){
+            System.out.println("Do you want to see your post?");
+            String press=keyb.nextLine();
+            if(press.equals("yes")){
+                boolean result=Post(answer,answer2,press);
+                 if(result){
               }
              }}
     }   
     
-    public static boolean Post(int answer,String answer2,int press1){
-        if(answer==1){
+    public static boolean Post(String answer,String answer2,String press1){
+        if(answer.equals("yes")){
             System.out.println("Your post is: " + answer2 );
-        return true;}
+        return true;
+        }
         return false;
     }
     
@@ -48,12 +48,12 @@ public class Animal_Owner extends User {
         System.out.println(Bird);
         Scanner keyb=new Scanner(System.in);
         System.out.println("If you want to see your post press 1");
-        int press1=keyb.nextInt();
-        if(press1==1){
-        boolean sonuc=Post();
+        String press1=keyb.nextLine();
+        //if(press1==1){
+        //boolean sonuc=Post();
         }
         
-    }
+   // }
     
     public Cat getCat() {
         return Cat;

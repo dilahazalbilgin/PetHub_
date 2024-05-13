@@ -3,6 +3,9 @@ package pethub;
 import java.util.Scanner;
 
 public class Animal_Owner extends User {
+    static int anlamiyorum=1;
+    
+    
     private Dog Dog;
     private Cat Cat;
     private Fish Fish;
@@ -13,15 +16,32 @@ public class Animal_Owner extends User {
         this.Cat=Cat;
         this.Fish=Fish;
         this.Bird=Bird;       
-    }   
-    
-    
+    }       
     public void AddPost(){
-        System.out.println("Why do you want to give away your pet?: ");
+        System.out.println("If you want add a post please press 1. ");
         Scanner keyb=new Scanner(System.in);
-        String reson=keyb.nextLine();
-        System.out.println("");
+        int answer=keyb.nextInt();
+        if(answer==1){
+        System.out.println("Why do you want to give away your pet?: ");
+        String answer3=keyb.nextLine();
+        String answer2=keyb.nextLine();
+        
+            System.out.println("If you want to see your post , you press 6.");
+            int press=keyb.nextInt();
+            if(press==6){
+                boolean sonuc=Post(answer,answer2);
+                 if(sonuc){
+              }
+             }}
     }   
+    
+    public static boolean Post(int answer,String answer2){
+        if(answer==1){
+            System.out.println("Your post is: " + answer2 );
+        return true;}
+        return false;
+    }
+    
     @Override
     public void information(){
         super.information();

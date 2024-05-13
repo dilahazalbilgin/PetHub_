@@ -1,43 +1,13 @@
 package pethub;
 import java.util.Scanner;
 public class PetHub {
-    //dila harika bir insan.
     static boolean online=true;
     static int numberOfEntries=3;
     public static void main(String[] args) {  
-        System.out.println("PETHUB'A HOŞGELDİNİZ!!! \nEĞER HESABINIZ VARSA 1'E BASARAK GİRİŞ YAPIN! \nHESABINIZ YOKSA 2'YE BASARAK YENİ HESAP OLUŞTURUN!");            
-        //Dog dog1=new Dog("golden",20,"It's a boy \nHe likes play ","I want a adopted");
-        //Animals[] a=new Animals[1];
-        //a[0]=dog1;
-        //for (Animals k:a) {
-            //System.out.println("Animal Species: " + dog1.getAnimalSpecies()+"\nAnimal Age: "+ dog1.animalAge+"\nAnimal Details: "+dog1.getAnimalDetails()+"\nAnimal Stories: "+ dog1.animalStories);
-            //k.AddType();//}  
-            
-            //Animal_WantingTo_Own a1= new Animal_WantingTo_Own ("cesur","atak",61);
-            //User[] b=new User[1];
-            //b[0]=a1;
-            //for(User t:b){
-            //a1.informationOfAWTO();
-            //}  
-            Dog d1=new Dog("d",5,"d","d","k","d,",true);
-            Cat a=new Cat("d",5,"d","d","k","d,",true);
-            Fish b=new Fish("d",5,"d","d","k","d,",true);
-            Bird c=new Bird("d",5,"d","d","k","d,",true);
-            
-            Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
-            User[] k=new User[2];
-            d.AddPost();
-            
-            
-            Scanner keyb=new Scanner(System.in);
-            System.out.println("yes");
-            int answer=keyb.nextInt();
-            if(answer==1){
-            d.information();
-            }
-            
-            
-           /* Scanner scanner= new Scanner(System.in);
+        System.out.println("PETHUB'A HOŞGELDİNİZ!!! \nEĞER HESABINIZ VARSA 1'E BASARAK GİRİŞ YAPIN! \nHESABINIZ YOKSA 2'YE BASARAK YENİ HESAP OLUŞTURUN!");
+    }
+    public void SignIn(){
+         Scanner scanner= new Scanner(System.in);
           int num=scanner.nextInt();
           if(num==1){        
         if(online){
@@ -65,20 +35,7 @@ public class PetHub {
        }else{
            System.out.println("Hak Sayınız Dolmuştur, hesabınız bloke oldu");
        }
-       }}if(num==2){}      
-       
-       //Animal_WantingTo_Own a1= new Animal_WantingTo_Own("a","d",5);
-            
-         //   User[] users=new User[10];
-          //  users[0]=a1;
-       
-       
-      // for(User a:users){
-         // a.A();
-       
-       //}*/
-    }
-    public void SignIn(){
+       }}if(num==2){}
         }
     
     public static boolean login(String username, String password){

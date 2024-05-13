@@ -20,7 +20,7 @@ public class Animal_WantingTo_Own extends User{
         String gender1=keyb.nextLine();
         System.out.println("Your gender is: " +gender1);
         }   
-    public  void addOwnAnimals(){
+    public void addOwnAnimals(){
         System.out.println("do you have an animal?");
         Scanner keyb=new Scanner(System.in);
         String a1=keyb.nextLine();

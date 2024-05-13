@@ -19,21 +19,30 @@ public class Animal_Owner extends User {
         Scanner keyb=new Scanner(System.in);
         String answer=keyb.nextLine();
         if(answer.equals("yes")){
+        System.out.println("Which animal do you want to adopt?");
+        String answer1=keyb.nextLine();
         System.out.println("Why do you want to give away your pet?: ");
         String answer2=keyb.nextLine();
+        System.out.println("How old is your animal?");
+        int answer3=keyb.nextInt();
+        System.out.println("Add detail?");
+        String answer0=keyb.nextLine();
+        String answer4=keyb.nextLine();
         
             System.out.println("Do you want to see your post?");
             String press=keyb.nextLine();
             if(press.equals("yes")){
-                boolean result=Post(answer,answer2,press);
+                boolean result=Post(answer,answer2,answer1,answer3,answer4);
                  if(result){
               }
              }}
-    }   
-    
-    public static boolean Post(String answer,String answer2,String press1){
+    }      
+    public static boolean Post(String answer,String answer2,String answer1,int answer3,String answer4){
         if(answer.equals("yes")){
+            System.out.println("You adopt a " +answer1);
             System.out.println("Your post is: " + answer2 );
+            System.out.println("Your pet is  "+answer3+" years old");
+            System.out.println("Detail: "+answer4 );
         return true;
         }
         return false;

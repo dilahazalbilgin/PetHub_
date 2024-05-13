@@ -4,7 +4,7 @@ public class PetHub {
     static boolean online=true;
     static int numberOfEntries=3;
     public static void main(String[] args) {  
-        System.out.println("PETHUB'A HOŞGELDİNİZ!!! \nEĞER HESABINIZ VARSA 1'E BASARAK GİRİŞ YAPIN! \nHESABINIZ YOKSA 2'YE BASARAK YENİ HESAP OLUŞTURUN!");
+        System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT , PRESS 1 AND LOG IN \nIF YOU DONT HAVE AN ACCOUNT , PRESS 2 AND SIGN IN!");
         
         Dog d1=new Dog("d",5,"d","d","k","d,",true);
             Cat a=new Cat("d",5,"d","d","k","d,",true);

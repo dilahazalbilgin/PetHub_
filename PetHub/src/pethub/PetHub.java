@@ -1,69 +1,81 @@
 package pethub;
+
 import java.util.Scanner;
+
 public class PetHub {
-    static boolean online=true;
-    static int numberOfEntries=3;
-    public static void main(String[] args) {  
-        System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT , PRESS 1 AND LOG IN \nIF YOU DONT HAVE AN ACCOUNT , PRESS 2 AND SIGN IN!");
-        
-            Dog d1=new Dog("d",5,"d","d","k","d,",true);
-            Cat a=new Cat("d",5,"d","d","k","d,",true);
-            Fish b=new Fish("d",5,"d","d","k","d,",true);
-            Bird c=new Bird("d",5,"d","d","k","d,",true);
-            
-            Animal_Owner d=new Animal_Owner("Hazal","Bilgin",553708613,d1,a,b,c);
-            User[] k=new User[2];
-            //d.AddPost();
-            
-            Animal_WantingTo_Own dila=new Animal_WantingTo_Own(7,"dila","bilgin",541651234);
-            dila.information();
-        
-    }
-    public static boolean SignIn(int giris){
-         Scanner scanner= new Scanner(System.in);
-          int num=scanner.nextInt();
-          if(num==1){        
-        if(online){
-       if(numberOfEntries>0){
-           while(online){            
-               System.out.println("Kullanıcı adınızı giriniz; ");
-               String username1=scanner.nextLine();
-               String username=scanner.nextLine();
-               System.out.println("Parolanızı giriniz; ");
-               String password=scanner.nextLine();    
-               boolean sonuc = login(username,password);
-               if(sonuc){
-                   System.out.println("Uygulamaya giriş yapıldı");
-                   break;
-               }else{
-               if(numberOfEntries==0){
-               online=false;
-               break;
-               }
-               }
-               if(online==false){
-                   System.out.println("Hak sayınız dolmuştur!!!");
-               }
-           }
-       }else{
-           System.out.println("Hak Sayınız Dolmuştur, hesabınız bloke oldu");
-       }
-       }}if(num==2){}
-        return false;
-    }
-    
-    public static boolean login(String username, String password){
-    if(username.equals("hazal")&& password.equals("6161")){
-    return true;
-    }else if(username.equals("eje")&& password.equals("1907")){return true;}
-    else{
-        numberOfEntries--;
-        System.out.println("Kullanıcı adı veya şifreniz hatalı!!!");
-        if(numberOfEntries==0){
-        online=false;
+    static boolean online = true;
+    static int numberOfEntries = 3;
+
+    public static void main(String[] args) {
+        System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT, PRESS 1 AND LOG IN \nIF YOU DON'T HAVE AN ACCOUNT, PRESS 2 AND SIGN IN!");
+
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Boş satırı tüket
+
+        if (choice == 1) {
+            SignIn(scanner);
+        } else if (choice == 2) {
+            SignUp(scanner);
+        } else {
+            System.out.println("Invalid choice!");
         }
-        return false;}       
-    } 
+    }
+
+    public static void SignUp(Scanner scanner) {
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter your surname:");
+        String surname = scanner.nextLine();
+        System.out.println("Enter your phone number:");
+        long phoneNumber = scanner.nextLong();
+        scanner.nextLine(); // Boş satırı tüket
+
+        User newUser = User.createAccount(name, surname, phoneNumber);
+        System.out.println("Account created successfully!");
+        newUser.information();
+    }
+
+    public static void SignIn(Scanner scanner) {
+        if (online) {
+            if (numberOfEntries > 0) {
+                while (online) {
+                    System.out.println("Enter your username:");
+                    String username = scanner.nextLine();
+                    System.out.println("Enter your password:");
+                    String password = scanner.nextLine();
+                    boolean result = login(username, password);
+                    if (result) {
+                        System.out.println("Login successful!");
+                        break;
+                    } else {
+                        if (numberOfEntries == 0) {
+                            online = false;
+                            break;
+                        }
+                    }
+                    if (!online) {
+                        System.out.println("Your attempts have been exhausted!");
+                    }
+                }
+            } else {
+                System.out.println("Your attempts have been exhausted, your account is blocked.");
+            }
+        }
+    }
+
+    public static boolean login(String username, String password) {
+        if (username.equals("hazal") && password.equals("6161")) {
+            return true;
+        } else if (username.equals("eje") && password.equals("1907")) {
+            return true;
+        } else {
+            numberOfEntries--;
+            System.out.println("Incorrect username or password!");
+            if (numberOfEntries == 0) {
+                online = false;
+            }
+            return false;
+        }
+    }
 }
-
-

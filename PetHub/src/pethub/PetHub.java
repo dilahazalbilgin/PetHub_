@@ -5,8 +5,19 @@ public class PetHub {
     static int numberOfEntries=3;
     public static void main(String[] args) {  
         System.out.println("PETHUB'A HOŞGELDİNİZ!!! \nEĞER HESABINIZ VARSA 1'E BASARAK GİRİŞ YAPIN! \nHESABINIZ YOKSA 2'YE BASARAK YENİ HESAP OLUŞTURUN!");
+        
+        Dog d1=new Dog("d",5,"d","d","k","d,",true);
+            Cat a=new Cat("d",5,"d","d","k","d,",true);
+            Fish b=new Fish("d",5,"d","d","k","d,",true);
+            Bird c=new Bird("d",5,"d","d","k","d,",true);
+            
+            Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
+            User[] k=new User[2];
+            d.AddPost();
+            
+        
     }
-    public void SignIn(){
+    public static boolean SignIn(int giris){
          Scanner scanner= new Scanner(System.in);
           int num=scanner.nextInt();
           if(num==1){        
@@ -36,7 +47,8 @@ public class PetHub {
            System.out.println("Hak Sayınız Dolmuştur, hesabınız bloke oldu");
        }
        }}if(num==2){}
-        }
+        return false;
+    }
     
     public static boolean login(String username, String password){
     if(username.equals("hazal")&& password.equals("6161")){

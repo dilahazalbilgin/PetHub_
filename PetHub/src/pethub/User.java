@@ -36,9 +36,9 @@ public class User {
     }
     
     public void information(){
-        System.out.println("Name: "+name);
-        System.out.println("Surname: "+surname);
-        System.out.println("Phone Number: "+phoneNumber);
+        System.out.println("Your name: "+name);
+        System.out.println("Your surname: "+surname);
+        System.out.println("Your phone Number: "+phoneNumber);
     }
     
 }

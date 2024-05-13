@@ -11,31 +11,24 @@ public class Animal_WantingTo_Own extends User{
     public Animal_WantingTo_Own( int petNumber, String name, String surname, long phoneNumber) {
         super(name, surname, phoneNumber);
         this.petNumber = petNumber;
-    }
-    
-    public static boolean addGender(){
+    }  
+    public static boolean add(){  
         System.out.println("what is your gender?");
         Scanner keyb=new Scanner(System.in);
         String gender1=keyb.nextLine();
-        System.out.println("Your gender is: " +gender1);
-        return true;
-        }   
-    public static boolean addOwnAnimals(){  
         System.out.println("do you have an animal?");
-        Scanner keyb=new Scanner(System.in);
         String a1=keyb.nextLine();
         if(a1.equals("yes")){
             System.out.println("Please write animals");
             String a2=keyb.nextLine();
             System.out.println("your animals: " + a2);
         }else{System.out.println("First animalll");}
+        System.out.println("Your gender is: " +gender1);
         return true;
     }   
     @Override
     public void information(){
-        boolean sonuc=addGender();
-        if(sonuc){}
-        boolean sonuc1=addOwnAnimals();
+        boolean sonuc1=add();
         if(sonuc1){}
         super.information();
         

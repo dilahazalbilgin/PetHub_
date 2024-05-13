@@ -6,16 +6,16 @@ public class PetHub {
     public static void main(String[] args) {  
         System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT , PRESS 1 AND LOG IN \nIF YOU DONT HAVE AN ACCOUNT , PRESS 2 AND SIGN IN!");
         
-        Dog d1=new Dog("d",5,"d","d","k","d,",true);
+            Dog d1=new Dog("d",5,"d","d","k","d,",true);
             Cat a=new Cat("d",5,"d","d","k","d,",true);
             Fish b=new Fish("d",5,"d","d","k","d,",true);
             Bird c=new Bird("d",5,"d","d","k","d,",true);
             
-            Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
+            Animal_Owner d=new Animal_Owner("Hazal","Bilgin",553708613,d1,a,b,c);
             User[] k=new User[2];
             //d.AddPost();
             
-            Animal_WantingTo_Own dila=new Animal_WantingTo_Own(5,"s","d",5);
+            Animal_WantingTo_Own dila=new Animal_WantingTo_Own(7,"dila","bilgin",541651234);
             dila.information();
         
     }

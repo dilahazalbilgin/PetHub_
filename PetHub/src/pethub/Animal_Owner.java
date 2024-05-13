@@ -7,7 +7,7 @@ public class Animal_Owner extends User {
     private Bird Bird;
     public Animal_Owner(String name, String surname, long phoneNumber,Dog Dog,Cat Cat,Fish Fish,Bird Bird) {
         super(name, surname, phoneNumber);    
-        this.Dog=Dog;
+        this.Dog= Dog;
         this.Cat=Cat;
         this.Fish=Fish;
         this.Bird=Bird;       
@@ -21,6 +21,7 @@ public class Animal_Owner extends User {
         String answer1=keyb.nextLine();
         System.out.println("Why do you want to give away your pet?: ");
         String answer2=keyb.nextLine();
+         
         System.out.println("How old is your animal?");
         int answer3=keyb.nextInt();
         System.out.println("Add detail?");

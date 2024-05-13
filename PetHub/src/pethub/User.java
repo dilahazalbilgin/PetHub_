@@ -1,14 +1,15 @@
 package pethub;
+
 public class User {
     
     protected String name;
     protected String surname;
     protected long phoneNumber;
     
-    public User(String name,String surname,long phoneNumber){
-    this.name=name;
-    this.surname=surname;
-    this.phoneNumber=phoneNumber;       
+    public User(String name, String surname, long phoneNumber){
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;       
     }          
     
     public String getName() {
@@ -36,9 +37,13 @@ public class User {
     }
     
     public void information(){
-        System.out.println("Your name: "+name);
-        System.out.println("Your surname: "+surname);
-        System.out.println("Your phone Number: "+phoneNumber);
+        System.out.println("Your name: " + name);
+        System.out.println("Your surname: " + surname);
+        System.out.println("Your phone number: " + phoneNumber);
     }
     
+    // Yeni bir hesap oluşturma yöntemi
+    public static User createAccount(String name, String surname, long phoneNumber) {
+        return new User(name, surname, phoneNumber);
+    }
 }

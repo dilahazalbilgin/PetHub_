@@ -2,8 +2,7 @@ package pethub;
 
 import java.util.Scanner;
 
-public class Animal_WantingTo_Own extends User{
-    
+public class Animal_WantingTo_Own extends User{    
     protected int petNumber;   
     public Animal_WantingTo_Own(String name, String surname, long phoneNumber) {
         super(name, surname, phoneNumber);
@@ -14,25 +13,32 @@ public class Animal_WantingTo_Own extends User{
         this.petNumber = petNumber;
     }
     
-    public static void addGender(){
-        System.out.println("what is your gender\n1-Girl\n2-Boy");
+    public static boolean addGender(){
+        System.out.println("what is your gender?");
         Scanner keyb=new Scanner(System.in);
         String gender1=keyb.nextLine();
         System.out.println("Your gender is: " +gender1);
+        return true;
         }   
-    public void addOwnAnimals(){
+    public static boolean addOwnAnimals(){  
         System.out.println("do you have an animal?");
         Scanner keyb=new Scanner(System.in);
         String a1=keyb.nextLine();
-        if(a1=="yes".toLowerCase()){
+        if(a1.equals("yes")){
             System.out.println("Please write animals");
             String a2=keyb.nextLine();
             System.out.println("your animals: " + a2);
         }else{System.out.println("First animalll");}
+        return true;
     }   
     @Override
     public void information(){
-    super.information();
+        boolean sonuc=addGender();
+        if(sonuc){}
+        boolean sonuc1=addOwnAnimals();
+        if(sonuc1){}
+        super.information();
+        
     }
     public int getPetNumber() {
         return petNumber;

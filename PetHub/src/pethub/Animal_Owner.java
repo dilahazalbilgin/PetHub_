@@ -1,7 +1,5 @@
 package pethub;
-
 import java.util.Scanner;
-
 public class Animal_Owner extends User {   
     private Dog Dog;
     private Cat Cat;

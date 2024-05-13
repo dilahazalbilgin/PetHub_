@@ -13,8 +13,10 @@ public class PetHub {
             
             Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
             User[] k=new User[2];
-            d.AddPost();
+            //d.AddPost();
             
+            Animal_WantingTo_Own dila=new Animal_WantingTo_Own(5,"s","d",5);
+            dila.information();
         
     }
     public static boolean SignIn(int giris){

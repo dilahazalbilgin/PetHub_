@@ -2,10 +2,7 @@ package pethub;
 
 import java.util.Scanner;
 
-public class Animal_Owner extends User {
-    static int anlamiyorum=1;
-    
-    
+public class Animal_Owner extends User {   
     private Dog Dog;
     private Cat Cat;
     private Fish Fish;

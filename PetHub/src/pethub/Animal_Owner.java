@@ -26,13 +26,13 @@ public class Animal_Owner extends User {
             System.out.println("If you want to see your post , you press 6.");
             int press=keyb.nextInt();
             if(press==6){
-                boolean sonuc=Post(answer,answer2);
+                boolean sonuc=Post(answer,answer2,press);
                  if(sonuc){
               }
              }}
     }   
     
-    public static boolean Post(int answer,String answer2){
+    public static boolean Post(int answer,String answer2,int press1){
         if(answer==1){
             System.out.println("Your post is: " + answer2 );
         return true;}
@@ -46,6 +46,13 @@ public class Animal_Owner extends User {
         System.out.println(Cat);
         System.out.println(Fish);
         System.out.println(Bird);
+        Scanner keyb=new Scanner(System.in);
+        System.out.println("If you want to see your post press 1");
+        int press1=keyb.nextInt();
+        if(press1==1){
+        boolean sonuc=Post();
+        }
+        
     }
     
     public Cat getCat() {

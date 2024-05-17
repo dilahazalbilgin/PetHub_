@@ -22,6 +22,6 @@ public class NewClass2 {
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }    
+}    
    
 }  

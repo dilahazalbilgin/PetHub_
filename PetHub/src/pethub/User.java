@@ -12,6 +12,15 @@ public class User {
         this.phoneNumber = phoneNumber;       
     }          
     
+        public void information(){
+        System.out.println("Your name: " + name);
+        System.out.println("Your surname: " + surname);
+        System.out.println("Your phone number: " + phoneNumber);
+    }
+        public static User createAccount(String name, String surname, long phoneNumber) {
+        return new User(name, surname, phoneNumber);
+    }
+    
     public String getName() {
         return name;
     }
@@ -36,14 +45,5 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
     
-    public void information(){
-        System.out.println("Your name: " + name);
-        System.out.println("Your surname: " + surname);
-        System.out.println("Your phone number: " + phoneNumber);
-    }
-    
-    // Yeni bir hesap oluşturma yöntemi
-    public static User createAccount(String name, String surname, long phoneNumber) {
-        return new User(name, surname, phoneNumber);
-    }
+
 }

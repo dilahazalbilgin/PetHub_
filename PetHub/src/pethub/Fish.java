@@ -1,13 +1,10 @@
 package pethub;
 public class Fish extends Animals implements Gendered{
-    
-    private String breed;
     private String gender;
     private boolean reproductive;
     
-    public Fish(String animalSpecies, int animalAge, String breed, String gender, boolean reproductive) {
+    public Fish(String animalSpecies, int animalAge, String gender, boolean reproductive) {
         super(animalSpecies, animalAge);
-        this.breed = breed;
         this.gender = gender;
         this.reproductive = reproductive;
     }

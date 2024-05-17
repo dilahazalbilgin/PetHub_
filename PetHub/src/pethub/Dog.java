@@ -9,9 +9,12 @@ public class Dog extends Animals implements Gendered {
         this.gender = gender;
         this.reproductive = reproductive;
     }
-    
-    public void DogInformation(){
-    
+
+    @Override
+    public void AnimalInformation(){
+        super.AnimalInformation();
+        System.out.println("Gender is: "+gender);
+        System.out.println("Reproductive is: "+reproductive );
     }
 
     @Override

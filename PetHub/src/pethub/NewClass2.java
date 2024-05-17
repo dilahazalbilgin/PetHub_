@@ -22,9 +22,6 @@ public class NewClass2 {
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }   
-    public static void main(String[] args) {  
-        createNewTable();  
-    }  
+    }    
    
 }  

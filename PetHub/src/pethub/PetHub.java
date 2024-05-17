@@ -9,9 +9,13 @@ public class PetHub {
     public static void main(String[] args) {
         System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT, PRESS 1 AND LOG IN \nIF YOU DON'T HAVE AN ACCOUNT, PRESS 2 AND SIGN IN!");
         NewClass.connect();
-        NewClass1.createNewDatabase("61");
+        NewClass1.createNewDatabase("SSSIT.db");
         NewClass2.createNewTable();
-        NewClass3.main(args);
+        NewClass3 app = new NewClass3();  
+        // insert three new rows  
+        app.insert("Eje", 61);  
+        app.insert("Kübra", 1461);  
+        app.insert("İrem", 6161);
         //Animal_Owner.Post("yes", "idk", "cat", numberOfEntries, "aa");
 
         Scanner scanner = new Scanner(System.in);

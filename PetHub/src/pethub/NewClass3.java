@@ -35,11 +35,7 @@ public class NewClass3 {
    
     public static void main(String[] args) {  
    
-        NewClass3 app = new NewClass3();  
-        // insert three new rows  
-        app.insert("Eje", 61);  
-        app.insert("Kübra", 1461);  
-        app.insert("İrem", 6161);  
+  
     }  
    
 }

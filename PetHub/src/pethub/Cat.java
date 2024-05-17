@@ -4,8 +4,8 @@ public class Cat extends Animals implements Gendered{
     private String gender;
     private boolean reproductive;
     
-    public Cat(String animalSpecies, int animalAge, String animalDetails, String animalStories, String breed, String gender, boolean reproductive) {
-        super(animalSpecies, animalAge, animalDetails, animalStories);
+    public Cat(String animalSpecies, int animalAge, String breed, String gender, boolean reproductive) {
+        super(animalSpecies, animalAge);
         this.breed = breed;
         this.gender = gender;
         this.reproductive = reproductive;

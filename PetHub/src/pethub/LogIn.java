@@ -33,7 +33,7 @@ public class LogIn {
                         System.out.println("Are you animal owner or animal wanting to own?\nIf you animal owner please press to 1\nIf you want to animal own please press to 2");
                         int press=scanner.nextInt();
                         if(press==1){
-                        Animal_Owner.Post("yes", "idk", "cat", numberOfEntries, "aa");
+                        Animal_Owner.Post("yes", "idk", "cat", "aa");
                         }else if(press==2){
                         Animal_WantingTo_Own.add();
                         }else{System.out.println("Please press 1 or 2");}

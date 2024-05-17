@@ -4,43 +4,45 @@ import java.util.Scanner;
 public abstract class Animals {
     protected String animalSpecies;
     protected int animalAge;
-    protected String animalDetails;
-    protected String animalStories;
     protected boolean reproductive;
     
-    public Animals(String animalSpecies, int animalAge, String animalDetails, String animalStories) {
+    public Animals(String animalSpecies, int animalAge) {
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
-        this.animalDetails = animalDetails;
-        this.animalStories = animalStories;
     }
     
-    public void AddType(){
+    public static boolean AddType(){
         System.out.println("You must add a type");
         Scanner keyb=new Scanner(System.in);
         String species=keyb.nextLine();
         System.out.println("species: " +species);
+        return true;
     }
 
-    public void AddAge(){
+    public static boolean AddAge(){
         System.out.println("You must add an age");
         Scanner keyb=new Scanner(System.in);
         int age=keyb.nextInt();
         System.out.println("Age: " +age);
+        return true;
     }
 
-    public void AddStory(){
+    public static boolean AddStory(){
         System.out.println("You must add a story");
         Scanner keyb=new Scanner(System.in);
         String story=keyb.nextLine();
         System.out.println("Story: " +story);
+        return true;
     }
     
-    public static boolean AnimalInformation(String species,int age,String story){
-        System.out.println("The species of this animal is : "+species);
-        System.out.println("This animals age is: "+age);
-        System.out.println("This animals story is: "+story);      
-    return true;
+    public void Detail(){
+    
+    }
+    
+    public void AnimalInformation(){
+        System.out.println("Animal Species: " +animalSpecies);
+        System.out.println("Animal age: " +animalAge);
+        System.out.println("Animal");
     }
     
     public abstract void makeSound();
@@ -59,22 +61,6 @@ public abstract class Animals {
 
     public void setAnimalAge(int animalAge) {
         this.animalAge = animalAge;
-    }
-
-    public String getAnimalDetails() {
-        return animalDetails;
-    }
-
-    public void setAnimalDetails(String animalDetails) {
-        this.animalDetails = animalDetails;
-    }
-
-    public String getAnimalStories() {
-        return animalStories;
-    }
-
-    public void setAnimalStories(String animalStories) {
-        this.animalStories = animalStories;
     }
 
     public void wantsAnimal(){

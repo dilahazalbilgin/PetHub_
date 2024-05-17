@@ -4,14 +4,15 @@ public class Dog extends Animals implements Gendered {
     private String gender;
     private boolean reproductive;
 
-    public Dog(String animalSpecies, int animalAge, String animalDetails, String animalStories,String gender, boolean reproductive) {
-        super(animalSpecies, animalAge, animalDetails, animalStories);
+    public Dog(String animalSpecies, int animalAge,String gender, boolean reproductive) {
+        super(animalSpecies, animalAge);
         this.gender = gender;
         this.reproductive = reproductive;
     }
     
+    public void DogInformation(){
     
-    
+    }
 
     @Override
     public void makeSound() {
@@ -37,22 +38,6 @@ public class Dog extends Animals implements Gendered {
 
     public void setAnimalAge(int animalAge) {
         this.animalAge = animalAge;
-    }
-
-    public String getAnimalDetails() {
-        return animalDetails;
-    }
-
-    public void setAnimalDetails(String animalDetails) {
-        this.animalDetails = animalDetails;
-    }
-
-    public String getAnimalStories() {
-        return animalStories;
-    }
-
-    public void setAnimalStories(String animalStories) {
-        this.animalStories = animalStories;
     }
 
     @Override

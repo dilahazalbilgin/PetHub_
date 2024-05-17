@@ -8,7 +8,6 @@ import java.sql.SQLException;
 public class NewClass3 {  
    
     private Connection connect() {  
-        // SQLite connection string  
         String url = "jdbc:sqlite:C://sqlite/SSSIT.db";  
         Connection conn = null;  
         try {  
@@ -38,9 +37,9 @@ public class NewClass3 {
    
         NewClass3 app = new NewClass3();  
         // insert three new rows  
-        app.insert("Dila", 61);  
-        app.insert("Hazal", 1461);  
-        app.insert("Bilgin", 6161);  
+        app.insert("Eje", 61);  
+        app.insert("Kübra", 1461);  
+        app.insert("İrem", 6161);  
     }  
    
 }

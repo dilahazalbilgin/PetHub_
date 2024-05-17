@@ -4,16 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;  
 import java.sql.SQLException;  
    
-public class NewClass {  
-     /** 
-     * Connect to a sample database 
-     */  
+public class NewClass {    
     public static void connect() {  
         Connection conn = null;  
-        try {  
-            // db parameters  
+        try {   
             String url = "jdbc:sqlite:a.db";  
-            // create a connection to the database  
             conn = DriverManager.getConnection(url);  
               
             System.out.println("Connection to SQLite has been established.");  
@@ -30,9 +25,6 @@ public class NewClass {
             }  
         }  
     }  
-    /** 
-     * @param args the command line arguments 
-     */  
     public static void main(String[] args) {  
         connect();  
     }  

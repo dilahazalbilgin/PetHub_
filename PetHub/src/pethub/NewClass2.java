@@ -7,10 +7,8 @@ import java.sql.Statement;
 public class NewClass2 {  
    
     public static void createNewTable() {  
-        // SQLite connection string  
         String url = "jdbc:sqlite:C:/sqlite/SSSIT.db";  
           
-        // SQL statement for creating a new table  
         String sql = "CREATE TABLE IF NOT EXISTS employees (\n"  
                 + " id integer PRIMARY KEY,\n"  
                 + " name text NOT NULL,\n"  
@@ -24,11 +22,7 @@ public class NewClass2 {
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }  
-   
-    /** 
-     * @param args the command line arguments 
-     */  
+    }   
     public static void main(String[] args) {  
         createNewTable();  
     }  

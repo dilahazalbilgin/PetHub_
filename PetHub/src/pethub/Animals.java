@@ -15,6 +15,34 @@ public abstract class Animals {
         this.animalStories = animalStories;
     }
     
+    public void AddType(){
+        System.out.println("You must add a type");
+        Scanner keyb=new Scanner(System.in);
+        String species=keyb.nextLine();
+        System.out.println("species: " +species);
+    }
+
+    public void AddAge(){
+        System.out.println("You must add an age");
+        Scanner keyb=new Scanner(System.in);
+        int age=keyb.nextInt();
+        System.out.println("Age: " +age);
+    }
+
+    public void AddStory(){
+        System.out.println("You must add a story");
+        Scanner keyb=new Scanner(System.in);
+        String story=keyb.nextLine();
+        System.out.println("Story: " +story);
+    }
+    
+    public static boolean AnimalInformation(String species,int age,String story){
+        System.out.println("The species of this animal is : "+species);
+        System.out.println("This animals age is: "+age);
+        System.out.println("This animals story is: "+story);      
+    return true;
+    }
+    
     public abstract void makeSound();
     
     public String getAnimalSpecies() {
@@ -66,25 +94,6 @@ public abstract class Animals {
         this.reproductive = reproductive;
     }
 
-    public void AddType(){
-        System.out.println("You must add a type");
-        Scanner keyb=new Scanner(System.in);
-        String type=keyb.nextLine();
-        System.out.println("Type: " +type);
-    }
-
-    public void AddAge(){
-        System.out.println("You must add an age");
-        Scanner keyb=new Scanner(System.in);
-        int age=keyb.nextInt();
-        System.out.println("Age: " +age);
-    }
-
-    public void AddStory(){
-        System.out.println("You must add a story");
-        Scanner keyb=new Scanner(System.in);
-        String story=keyb.nextLine();
-        System.out.println("Story: " +story);
-    }
+    
 }
  

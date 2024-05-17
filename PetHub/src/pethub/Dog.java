@@ -1,16 +1,17 @@
 package pethub;
 
 public class Dog extends Animals implements Gendered {
-    private String breed;
     private String gender;
     private boolean reproductive;
 
-    public Dog(String animalSpecies, int animalAge, String animalDetails, String animalStories, String breed, String gender, boolean reproductive) {
+    public Dog(String animalSpecies, int animalAge, String animalDetails, String animalStories,String gender, boolean reproductive) {
         super(animalSpecies, animalAge, animalDetails, animalStories);
-        this.breed = breed;
         this.gender = gender;
         this.reproductive = reproductive;
     }
+    
+    
+    
 
     @Override
     public void makeSound() {
@@ -20,14 +21,6 @@ public class Dog extends Animals implements Gendered {
     @Override
     public String getGender() {
         return gender;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
     }
 
     public String getAnimalSpecies() {

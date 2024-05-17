@@ -2,10 +2,18 @@ package pethub;
 
 import java.util.Scanner;
 
-public class Animal_WantingTo_Own extends User{    
+public class Animal_WantingTo_Own extends User{ 
+    private Dog Dog;
+    private Cat Cat;
+    private Fish Fish;
+    private Bird Bird;
     protected int petNumber;   
-    public Animal_WantingTo_Own(String name, String surname, long phoneNumber) {
+    public Animal_WantingTo_Own(String name, String surname, long phoneNumber,Dog Dog,Cat Cat,Fish Fish,Bird Bird) {
         super(name, surname, phoneNumber);
+        this.Dog= Dog;
+        this.Cat=Cat;
+        this.Fish=Fish;
+        this.Bird=Bird; 
     }
 
     public Animal_WantingTo_Own( int petNumber, String name, String surname, long phoneNumber) {
@@ -26,10 +34,26 @@ public class Animal_WantingTo_Own extends User{
         System.out.println("Your gender is: " +gender1);
         return true;
     }   
+        public static boolean wantsAnimal(){
+        System.out.println("Which animal do you want to adopt?: ");
+        Scanner keyb=new Scanner(System.in);
+        System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");
+        int n1=keyb.nextInt();
+        if(n1==1){Animal_Owner.Post("d", "d", "e", "w");
+                
+        }else if(n1==2){
+        }else if(n1==3){
+        }else if(n1==4){
+        }
+        return true;
+    }
+    
     @Override
     public void information(){
         boolean sonuc1=add();
         if(sonuc1){}
+        boolean sonuc2=wantsAnimal();
+        if(sonuc2){}
         super.information();
         
     }
@@ -64,4 +88,36 @@ public class Animal_WantingTo_Own extends User{
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-}
+    
+    public Dog getDog() {
+        return Dog;
+    }
+
+    public void setDog(Dog Dog) {
+        this.Dog = Dog;
+    }
+
+    public Cat getCat() {
+        return Cat;
+    }
+
+    public void setCat(Cat Cat) {
+        this.Cat = Cat;
+    }
+
+    public Fish getFish() {
+        return Fish;
+    }
+
+    public void setFish(Fish Fish) {
+        this.Fish = Fish;
+    }
+
+    public Bird getBird() {
+        return Bird;
+    }
+
+    public void setBird(Bird Bird) {
+        this.Bird = Bird;
+    }
+    }

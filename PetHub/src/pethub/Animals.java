@@ -27,14 +27,6 @@ public abstract class Animals {
         System.out.println("Animal age: " +animalAge);
     }
     
-    public void wantsAnimal(){
-        System.out.println("Which animal do you want to adopt? :");
-        Scanner keyb=new Scanner(System.in);
-        System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");
-        int n1=keyb.nextInt();
-        if(n1==1){      
-        }
-    }
     public abstract void makeSound();
     
     public String getAnimalSpecies() {

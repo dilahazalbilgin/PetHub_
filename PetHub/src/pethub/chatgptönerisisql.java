@@ -1,6 +1,10 @@
-package pethub;
+/*package pethub;
 
 import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class PetHub {
     static boolean online = true;
@@ -13,14 +17,16 @@ public class PetHub {
         NewClass2.createNewTable();
         NewClass3 app = new NewClass3();  
         // insert three new rows  
-        app.insert("Eje", 61);  
+        /*app.insert("Eje", 61);  
         app.insert("Kübra", 1461);  
-        app.insert("İrem", 6161);
+        app.insert("İrem", 6161);*/
         //Animal_Owner.Post("yes", "idk", "cat", numberOfEntries, "aa");
 
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Boş satırı tüket
+        scanner.nextLine(); 
+        System.out.println("Hesabın varsa 1i seç");
+        System.out.println("hesap oluşturmak istiyorsan 2yi seç");
 
         if (choice == 1) {
             SignIn(scanner);
@@ -38,8 +44,27 @@ public class PetHub {
         String surname = scanner.nextLine();
         System.out.println("Enter your phone number:");
         long phoneNumber = scanner.nextLong();
-        scanner.nextLine(); // Boş satırı tüket
+        scanner.nextLine(); 
+        System.out.println("Enter your username:");
+        String username = scanner.nextLine();
+        System.out.println("Enter your password:");
+        String password = scanner.nextLine();
 
+        String sql = "INSERT INTO users(name, surname, phone, username, password) VALUES(?,?,?,?,?)";
+
+        try (Connection conn = NewClass.connect();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        pstmt.setString(1, name);
+        pstmt.setString(2, surname);
+        pstmt.setLong(3, phoneNumber);
+        pstmt.setString(4, username);
+        pstmt.setString(5, password);
+        pstmt.executeUpdate();
+        System.out.println("Account created successfully!");
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
+        
         User newUser = User.createAccount(name, surname, phoneNumber);
         System.out.println("Account created successfully!");
         newUser.information();
@@ -74,9 +99,15 @@ public class PetHub {
     }
 
     public static boolean login(String username, String password) {
-        if (username.equals("hazal") && password.equals("6161")) {
-            return true;
-        } else if (username.equals("eje") && password.equals("1907")) {
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+    try (Connection conn = NewClass.connect();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        pstmt.setString(1, username);
+        pstmt.setString(2, password);
+        ResultSet rs = pstmt.executeQuery();
+
+        if (rs.next()) {
             return true;
         } else {
             numberOfEntries--;
@@ -86,5 +117,10 @@ public class PetHub {
             }
             return false;
         }
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+        return false;
+    }
     }
 }
+*/

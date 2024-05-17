@@ -19,9 +19,6 @@ public class Animal_Owner extends User {
         if(answer.equals("yes")){
         System.out.println("Which animal do you want to adopt?");
         String answer1=keyb.nextLine();
-        if(answer1.equalsIgnoreCase("dog")){
-            
-        }
         System.out.println("Why do you want to give away your pet?: ");
         String answer2=keyb.nextLine();
         System.out.println("Add detail?");
@@ -35,7 +32,16 @@ public class Animal_Owner extends User {
                  if(result){
               }
              }}
-    }      
+    }
+    public static boolean SeePost(String answer1,String answer2,String answer4){
+        if(answer1.equalsIgnoreCase("dog")||answer1.equalsIgnoreCase("cat")||answer1.equalsIgnoreCase("fish")||answer1.equalsIgnoreCase("bird")){
+            System.out.println("Animal is: "+ answer1);
+            System.out.println("Their owner give him/his because: "+answer2);
+            System.out.println("Detail is: "+ answer4);
+        }      
+    return true;
+    }
+    
     public static boolean Post(String answer,String answer2,String answer1,String answer4){
         if(answer.equals("yes")){
             System.out.println("You adopt a " +answer1);

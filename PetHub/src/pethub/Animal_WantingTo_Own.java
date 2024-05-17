@@ -34,26 +34,33 @@ public class Animal_WantingTo_Own extends User{
         System.out.println("Your gender is: " +gender1);
         return true;
     }   
-        public static boolean wantsAnimal(){
+        public static boolean wantsAnimal(String answer1,String answer2,String answer4){
         System.out.println("Which animal do you want to adopt?: ");
         Scanner keyb=new Scanner(System.in);
         System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");
         int n1=keyb.nextInt();
-        if(n1==1){Animal_Owner.Post("d", "d", "e", "w");
-                
+        if(n1==1){
+            System.out.println("Do you want to see dog's post?");
+            String answer0=keyb.nextLine();
+            String cevap=keyb.nextLine();
+            if(cevap.equalsIgnoreCase("yes")){
+            Animal_Owner.SeePost("a","b","c");
+            
+            //Animal_Owner.Post(answer0, answer2, answer1, answer4);
+            }             
         }else if(n1==2){
         }else if(n1==3){
         }else if(n1==4){
         }
         return true;
     }
-    
     @Override
     public void information(){
+        boolean sonuc2=wantsAnimal("a","b","d");
+        if(sonuc2){}
         boolean sonuc1=add();
         if(sonuc1){}
-        boolean sonuc2=wantsAnimal();
-        if(sonuc2){}
+        
         super.information();
         
     }

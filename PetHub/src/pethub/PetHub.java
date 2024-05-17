@@ -16,7 +16,7 @@ public class PetHub {
             
             Animal_WantingTo_Own d=new Animal_WantingTo_Own("s","d",556,d1,a,b,c);
             User[] k=new User[2];
-            
+            d.information();
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine(); // Boş satırı tüket

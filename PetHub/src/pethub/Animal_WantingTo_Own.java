@@ -44,7 +44,7 @@ public class Animal_WantingTo_Own extends User{
             String answer0=keyb.nextLine();
             String cevap=keyb.nextLine();
             if(cevap.equalsIgnoreCase("yes")){
-            Animal_Owner.SeePost("a","b","c");
+            Animal_Owner.Post(answer0, answer0, answer0, answer0);
             
             //Animal_Owner.Post(answer0, answer2, answer1, answer4);
             }             

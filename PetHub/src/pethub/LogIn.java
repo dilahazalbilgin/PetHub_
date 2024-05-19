@@ -34,12 +34,16 @@ public class LogIn {
                         int press=scanner.nextInt();
                         if(press==1){
                             System.out.println("Please enter the action you are the perform");
-                            System.out.println("1-Add Post\n2-See Post\n3-See Information");
+                            System.out.println("1-Add Post\n2-See Post");
                             int enter=scanner.nextInt();
-                            if(enter==1){Animal_Owner.Post(password, password, password, password);}
+                            if(enter==1){Animal_Owner.AddPost();}
+                            else if(press==2){
+                             Animal_Owner.Post(password, password, password, password);}
+                            else{System.out.println("Please press 1 or 2 ");}
                         }else if(press==2){
-                        Animal_WantingTo_Own.add();
-                        }else{System.out.println("Please press 1 or 2");}
+                            System.out.println("Please enter the action you are the perform");
+                        
+                        }
                         break;
                     } else {
                         if (numberOfEntries == 0) {

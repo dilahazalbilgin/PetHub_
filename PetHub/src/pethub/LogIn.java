@@ -33,7 +33,10 @@ public class LogIn {
                         System.out.println("Are you animal owner or animal wanting to own?\nIf you animal owner please press to 1\nIf you want to animal own please press to 2");
                         int press=scanner.nextInt();
                         if(press==1){
-                        Animal_Owner.Post("yes", "idk", "cat", "aa");
+                            System.out.println("Please enter the action you are the perform");
+                            System.out.println("1-Add Post\n2-See Post\n3-See Information");
+                            int enter=scanner.nextInt();
+                            if(enter==1){Animal_Owner.Post(password, password, password, password);}
                         }else if(press==2){
                         Animal_WantingTo_Own.add();
                         }else{System.out.println("Please press 1 or 2");}
@@ -66,6 +69,5 @@ public class LogIn {
                 online = false;
             }
             return false;
-        }
-    }
-}
+
+        }}}

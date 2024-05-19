@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;  
 import java.sql.SQLException;  
    
-public class NewClass3 {  
+public class Insert {  
    
     private Connection connect() {  
         String url = "jdbc:sqlite:C://sqlite/SSSIT.db";  
@@ -19,23 +19,20 @@ public class NewClass3 {
     }  
    
   
-    public void insert(String name, double capacity) {  
-        String sql = "INSERT INTO employees(name, capacity) VALUES(?,?)";  
+    public void insert(String name, String surname,String username,String phoneNumber,String password) {  
+        String sql = "INSERT INTO user(name, surname, username,phoneNumber,password) VALUES(?,?,?,?,?)";  
    
         try{  
             Connection conn = this.connect();  
             PreparedStatement pstmt = conn.prepareStatement(sql);  
             pstmt.setString(1, name);  
-            pstmt.setDouble(2, capacity);  
+            pstmt.setString(2, surname);
+            pstmt.setString(3, username);
+            pstmt.setString(4, phoneNumber);
+            pstmt.setString(5, password);
+
             pstmt.executeUpdate();  
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }  
-   
-    public static void main(String[] args) {  
-   
-  
-    }  
-   
-}
+    }}

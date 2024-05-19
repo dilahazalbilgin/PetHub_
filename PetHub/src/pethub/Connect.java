@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;  
 import java.sql.SQLException;  
    
-public class NewClass {    
+public class Connect {    
     public static void connect() {  
         Connection conn = null;  
         try {   
@@ -23,7 +23,4 @@ public class NewClass {
             } catch (SQLException ex) {  
                 System.out.println(ex.getMessage());  
             }  
-        }  
-    }  
-
-}  
+        }}}

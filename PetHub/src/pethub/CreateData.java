@@ -5,7 +5,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;  
 import java.sql.SQLException;  
    
-public class NewClass1 {  
+public class CreateData {  
   
     public static void createNewDatabase(String fileName) {  
    
@@ -21,7 +21,4 @@ public class NewClass1 {
    
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
-        }  
-    }  
-  
-}  
+        }}}

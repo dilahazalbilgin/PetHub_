@@ -25,3 +25,12 @@ public class YorumSatırlarınıAtmakİçinSayfa {
             Animal_Owner d=new Animal_Owner("s","d",556,d1,a,b,c);
             User[] k=new User[2];
             d.AddPost();*/
+
+            /*Dog d1=new Dog("d",5,"d",true);
+            Cat a=new Cat("d",5,"d",true);
+            Fish b=new Fish("d",5,"d",true);
+            Bird c=new Bird("d",5,"d",true);
+            
+            Animal_WantingTo_Own d=new Animal_WantingTo_Own("s","d",556,d1,a,b,c);
+            User[] k=new User[2];
+            d.information();*/

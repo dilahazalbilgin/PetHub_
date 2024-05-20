@@ -3,8 +3,8 @@ public class Cat extends Animals implements Gendered{
     private String gender;
     private boolean reproductive;
     
-    public Cat(String animalSpecies, int animalAge, String gender, boolean reproductive) {
-        super(animalSpecies, animalAge);
+    public Cat(String name,String animalSpecies, int animalAge, String gender, boolean reproductive) {
+        super(name, animalSpecies, animalAge);
         this.gender = gender;
         this.reproductive = reproductive;
     }

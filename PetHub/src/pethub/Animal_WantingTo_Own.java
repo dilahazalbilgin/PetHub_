@@ -48,9 +48,20 @@ public class Animal_WantingTo_Own extends User{
             
             //Animal_Owner.Post(answer0, answer2, answer1, answer4);
             }             
-        }else if(n1==2){
-        }else if(n1==3){
-        }else if(n1==4){
+        }else if(n1==2){System.out.println("Do you want to see cat'a post?");
+        String answer0=keyb.nextLine();
+        String cevap1=keyb.nextLine();
+        if(cevap1.equalsIgnoreCase("yes")){
+        
+        }
+        }else if(n1==3){System.out.println("Do you want to see bird'a post?");
+        String answer0=keyb.nextLine();
+        String cevap2=keyb.nextLine();
+        if(cevap2.equalsIgnoreCase("yes")){}
+        }else if(n1==4){System.out.println("Do you want to see fish'a post?");
+        String answer0=keyb.nextLine();
+        String cevap3=keyb.nextLine();
+        if(cevap3.equalsIgnoreCase("yes")){}
         }
         return true;
     }

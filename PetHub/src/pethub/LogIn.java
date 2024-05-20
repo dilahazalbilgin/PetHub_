@@ -42,7 +42,11 @@ public class LogIn {
                             else{System.out.println("Please press 1 or 2 ");}
                         }else if(press==2){
                             System.out.println("Please enter the action you are the perform");
-                            System.out.println("1-Add Post\n2-See Post");
+                            System.out.println("1-Add Info\n2-Want Animal");
+                            int enter1=scanner.nextInt();
+                            if(enter1==1){Animal_WantingTo_Own.Add();}
+                            else if(enter1==2){Animal_WantingTo_Own.WantsAnimal();}
+                            else{System.out.println("Please press 1 or 2 ");}
                         }
                         break;
                     } else {

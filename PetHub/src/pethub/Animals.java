@@ -18,6 +18,14 @@ public abstract class Animals {
         System.out.println("Your story is: " +story);
         return true;
     }
+    
+    public static boolean AnimalPost(){
+        System.out.println("-----Animal Post------");
+        Animal_Owner.AddPost();
+        
+        
+        return true;
+    }
 
     
     public void AnimalInformation(){

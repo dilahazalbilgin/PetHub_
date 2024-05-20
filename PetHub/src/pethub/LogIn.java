@@ -16,7 +16,7 @@ public class LogIn {
 
         User newUser = User.createAccount(name, surname, phoneNumber);
         System.out.println("Account created successfully!");
-        newUser.information();
+        newUser.Information();
     }
 
     public static void SignIn(Scanner scanner) {
@@ -42,7 +42,7 @@ public class LogIn {
                             else{System.out.println("Please press 1 or 2 ");}
                         }else if(press==2){
                             System.out.println("Please enter the action you are the perform");
-                        
+                            System.out.println("1-Add Post\n2-See Post");
                         }
                         break;
                     } else {

@@ -20,7 +20,7 @@ public class Animal_WantingTo_Own extends User{
         super(name, surname, phoneNumber);
         this.petNumber = petNumber;
     }  
-    public static boolean add(){  
+    public static boolean Add(){  
         System.out.println("what is your gender?");
         Scanner keyb=new Scanner(System.in);
         String gender1=keyb.nextLine();
@@ -34,7 +34,7 @@ public class Animal_WantingTo_Own extends User{
         System.out.println("Your gender is: " +gender1);
         return true;
     }   
-        public static boolean wantsAnimal(){
+        public static boolean WantsAnimal(){
         System.out.println("Which animal do you want to adopt?: ");
         Scanner keyb=new Scanner(System.in);
         System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");
@@ -55,13 +55,13 @@ public class Animal_WantingTo_Own extends User{
         return true;
     }
     @Override
-    public void information(){
-        boolean sonuc2=wantsAnimal();
+    public void Information(){
+        boolean sonuc2=WantsAnimal();
         if(sonuc2){}
-        boolean sonuc1=add();
+        boolean sonuc1=Add();
         if(sonuc1){}
         
-        super.information();
+        super.Information();
         
     }
     public int getPetNumber() {

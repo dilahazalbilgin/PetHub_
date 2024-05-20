@@ -33,6 +33,10 @@ public class Animal_Owner extends User {
              }}
         return true;
     }
+    public static boolean Post(String answer){
+        if(answer.equals("no")){
+        }
+    return true;}
     
     public static boolean Post(String answer,String answer2,String answer1,String answer4){
         if(answer.equals("yes")){

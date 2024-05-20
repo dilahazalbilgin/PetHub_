@@ -47,8 +47,8 @@ public class Animal_Owner extends User {
     }
     
     @Override
-    public void information(){
-        super.information();
+    public void Information(){
+        super.Information();
         System.out.println(Dog);
         System.out.println(Cat);
         System.out.println(Fish);

@@ -26,10 +26,12 @@ public class PetHub {
         CreateTable.createNewTable();
         Insert app = new Insert();  
 
-        app.insert("Ece", "Sarıyer", "ejess","05412681907", "1907");  
-        app.insert("Kübra", "Batalgazi", "kubrabb", "05056487596","5151");  
-        app.insert("İrem", "Karakurt", "iremkrkrt", "05326895060", "6060");
-        app.insert("Hazal", "Bilgin", "hbilginn", "05326895061", "6161");
+        app.insertUser("Ece", "Sarıyer", "ejess","05412681907", "1907");  
+        app.insertUser("Kübra", "Batalgazi", "kubrabb", "05056487596","5151");  
+        app.insertUser("İrem", "Karakurt", "iremkrkrt", "05326895060", "6060");
+        app.insertUser("Hazal", "Bilgin", "hbilginn", "05326895061", "6161");
+        
+        app.insertAnimal("umut",3, "dog", "yes", "male", 1);
  
 
     }}

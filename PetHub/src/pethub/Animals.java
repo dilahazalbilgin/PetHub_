@@ -2,11 +2,12 @@ package pethub;
 import java.util.Scanner;
 
 public abstract class Animals {
+    protected String name;
     protected String animalSpecies;
     protected int animalAge;
     protected boolean reproductive;
     
-    public Animals(String animalSpecies, int animalAge) {
+    public Animals(String name,String animalSpecies, int animalAge) {
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
     }

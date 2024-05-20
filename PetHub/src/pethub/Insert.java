@@ -19,7 +19,7 @@ public class Insert {
     }  
    
   
-    public void insert(String name, String surname,String username,String phoneNumber,String password) {  
+    public void insertUser(String name, String surname,String username,String phoneNumber,String password) {  
         String sql = "INSERT INTO user(name, surname, username,phoneNumber,password) VALUES(?,?,?,?,?)";  
    
         try{  
@@ -35,4 +35,37 @@ public class Insert {
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }}
+    }
+    
+    public void insertAnimal(String name,int age, String animalSpecies, String reproductive, String gender, int ownerId) {  
+        String sql = "INSERT INTO Animal(name, age, animalSpecies, reproductive, gender, owner_id) VALUES(?,?,?,?,?,?)";  
+   
+        Connection conn = null;  
+        PreparedStatement pstmt = null;  
+        try {  
+            conn = this.connect();  
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, name);
+            pstmt.setInt(2, age);  
+            pstmt.setString(3, animalSpecies);  
+            pstmt.setString(4, reproductive);  
+            pstmt.setString(5, gender);  
+            pstmt.setInt(6, ownerId);  
+
+            pstmt.executeUpdate();  
+        } catch (SQLException e) {  
+            System.out.println(e.getMessage());  
+        } finally {  
+            try {  
+                if (pstmt != null) {  
+                    pstmt.close();  
+                }  
+                if (conn != null) {  
+                    conn.close();  
+                }  
+            } catch (SQLException ex) {  
+                System.out.println(ex.getMessage());  
+            }  
+        }
+    }
+}

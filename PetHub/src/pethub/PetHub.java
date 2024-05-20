@@ -33,5 +33,7 @@ public class PetHub {
         
         app.insertAnimal("umut",3, "dog", "yes", "male", 1);
  
-
+        
+        Select selectApp = new Select();
+        selectApp.selectAll();
     }}

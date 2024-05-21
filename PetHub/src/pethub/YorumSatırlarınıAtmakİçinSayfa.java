@@ -34,3 +34,10 @@ public class YorumSatırlarınıAtmakİçinSayfa {
             Animal_WantingTo_Own d=new Animal_WantingTo_Own("s","d",556,d1,a,b,c);
             User[] k=new User[2];
             d.information();*/
+
+/* app.insertUser("Ece", "Sarıyer", "ejess","05412681907", "1907");  
+        app.insertUser("Kübra", "Batalgazi", "kubrabb", "05056487596","5151");  
+        app.insertUser("İrem", "Karakurt", "iremkrkrt", "05326895060", "6060");
+        app.insertUser("Hazal", "Bilgin", "hbilginn", "05326895061", "6161");
+        
+        app.insertAnimal("umut",3, "dog", "yes", "male", 1);*/

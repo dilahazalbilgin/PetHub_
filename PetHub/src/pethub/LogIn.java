@@ -8,7 +8,7 @@ import static pethub.PetHub.numberOfEntries;
 import static pethub.PetHub.online;
 
 public class LogIn {
-    
+    //deneme
     
     private Connection connect(){
         String url = "jdbc:sqlite:C://sqlite/SSSIT.db";

@@ -41,3 +41,16 @@ public class YorumSatırlarınıAtmakİçinSayfa {
         app.insertUser("Hazal", "Bilgin", "hbilginn", "05326895061", "6161");
         
         app.insertAnimal("umut",3, "dog", "yes", "male", 1);*/
+
+
+/*System.out.println("Enter your name:");
+        String name=scanner.nextLine();
+        System.out.println("Enter your surname:");
+        String surname = scanner.nextLine();
+        System.out.println("Enter your phone number:");
+        long phoneNumber = scanner.nextLong();
+        scanner.nextLine(); // Boş satırı tüket
+
+        User newUser = User.createAccount(name, surname, phoneNumber);
+        System.out.println("Account created successfully!");
+        newUser.Information();*/

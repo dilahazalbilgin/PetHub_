@@ -13,32 +13,19 @@ public class LogIn {
     }
     
     public  static void SignUp(Scanner scanner) { 
-        Insert u1=new Insert();
-        System.out.println("Enter the name");
+        Insert newUser=new Insert();
+        System.out.println(" Please enter the name");
         String name1=scanner.nextLine();
-        System.out.println("Enter the surname");
+        System.out.println("Please enter the surname");
         String name2=scanner.nextLine();
-        System.out.println("Enter the username");
+        System.out.println("Please enter the username");
         String name3=scanner.nextLine();
-        System.out.println("Enter the phone");
+        System.out.println("Please enter the phone number");
         String name4=scanner.nextLine();
-        System.out.println("Enter the password");
+        System.out.println("Please create password");
         String name5=scanner.nextLine();
         
-         u1.insertUser(name1,name2,name3,name4,name5);
-        
-        
-        /*System.out.println("Enter your name:");
-        String name=scanner.nextLine();
-        System.out.println("Enter your surname:");
-        String surname = scanner.nextLine();
-        System.out.println("Enter your phone number:");
-        long phoneNumber = scanner.nextLong();
-        scanner.nextLine(); // Boş satırı tüket
-
-        User newUser = User.createAccount(name, surname, phoneNumber);
-        System.out.println("Account created successfully!");
-        newUser.Information();*/
+         newUser.insertUser(name1,name2,name3,name4,name5);     
     }
 
     public static void SignIn(Scanner scanner) {

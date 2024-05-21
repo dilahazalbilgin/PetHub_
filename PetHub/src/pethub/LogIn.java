@@ -12,8 +12,23 @@ public class LogIn {
         app.insertUser(name, surname, username, password, email);
     }
     
-    public  void SignUp(Scanner scanner) {      
-        System.out.println("Enter your name:");
+    public  void SignUp(Scanner scanner) { 
+        Insert u1=new Insert();
+        System.out.println("Enter the name");
+        String name1=scanner.nextLine();
+        System.out.println("Enter the surname");
+        String name2=scanner.nextLine();
+        System.out.println("Enter the username");
+        String name3=scanner.nextLine();
+        System.out.println("Enter the phone");
+        String name4=scanner.nextLine();
+        System.out.println("Enter the password");
+        String name5=scanner.nextLine();
+        
+         u1.insertUser(name1,name2,name3,name4,name5);
+        
+        
+        /*System.out.println("Enter your name:");
         String name=scanner.nextLine();
         System.out.println("Enter your surname:");
         String surname = scanner.nextLine();
@@ -23,7 +38,7 @@ public class LogIn {
 
         User newUser = User.createAccount(name, surname, phoneNumber);
         System.out.println("Account created successfully!");
-        newUser.Information();
+        newUser.Information();*/
     }
 
     public static void SignIn(Scanner scanner) {

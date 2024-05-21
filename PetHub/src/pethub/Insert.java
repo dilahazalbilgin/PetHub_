@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;  
 import java.sql.PreparedStatement;  
 import java.sql.SQLException;  
+
    
 public class Insert {  
    
@@ -25,6 +26,7 @@ public class Insert {
         try{  
             Connection conn = this.connect();  
             PreparedStatement pstmt = conn.prepareStatement(sql);  
+            
             pstmt.setString(1, name);  
             pstmt.setString(2, surname);
             pstmt.setString(3, username);

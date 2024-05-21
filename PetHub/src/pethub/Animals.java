@@ -7,6 +7,7 @@ public abstract class Animals {
     protected int animalAge;
     protected boolean reproductive;
     
+    
     public Animals(String name,String animalSpecies, int animalAge) {
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;

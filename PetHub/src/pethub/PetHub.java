@@ -5,10 +5,14 @@ import java.util.Scanner;
 public class PetHub {
     static boolean online = true;
     static int numberOfEntries = 3;
+    
 
     public static void main(String[] args) {
         System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT, PRESS 1 AND LOG IN \nIF YOU DON'T HAVE AN ACCOUNT, PRESS 2 AND SIGN IN!");
         
+        LogIn u1 = new LogIn();
+        u1.register("can","ugurtepe","cannatar","0987","can@gmail.com");
+
         //LogIn u1=new LogIn();        
         
         Scanner scanner = new Scanner(System.in);

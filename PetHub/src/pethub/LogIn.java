@@ -10,6 +10,12 @@ import static pethub.PetHub.online;
 public class LogIn {
     //deneme
     
+    public void register(String name, String surname,String username, String password, String email) {
+        //Creating user
+        LogIn app = new LogIn();
+        app.SignUp( name, surname, username, password, email);
+    }
+    
     private Connection connect(){
         String url = "jdbc:sqlite:C://sqlite/SSSIT.db";
         Connection conn = null;
@@ -21,7 +27,7 @@ public class LogIn {
         return conn;
         }
     
-    public  void SignUp(Scanner scanner,String name,String surname,String username,String password,String email) {
+    public  void SignUp(String name,String surname,String username,String password,String email) {
         String sql = "INSERT INTO Users(name, surname,username,password,email) VALUES(?,?,?,?,?)";
         try{
             Connection conn = this.connect();

@@ -10,17 +10,12 @@ public class PetHub {
     public static void main(String[] args) {
         System.out.println("WELCOME TO PETHUB!!! \nIF YOU HAVE AN ACCOUNT, PRESS 1 AND LOG IN \nIF YOU DON'T HAVE AN ACCOUNT, PRESS 2 AND SIGN IN!");
         
-        Insert u1=new Insert();
-        u1.insertUser("can","ugurtepe","cannatar","0987","can@gmail.com");
-
-        //LogIn u1=new LogIn();        
+    
         
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine(); 
         
-        
-
         if (choice == 1) {
             LogIn.SignIn(scanner);
         } else if (choice == 2) {

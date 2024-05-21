@@ -12,7 +12,7 @@ public class LogIn {
         app.insertUser(name, surname, username, password, email);
     }
     
-    public  void SignUp(Scanner scanner) { 
+    public  static void SignUp(Scanner scanner) { 
         Insert u1=new Insert();
         System.out.println("Enter the name");
         String name1=scanner.nextLine();

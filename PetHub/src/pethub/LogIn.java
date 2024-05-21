@@ -1,8 +1,4 @@
 package pethub;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Scanner;
 import static pethub.PetHub.numberOfEntries;
 import static pethub.PetHub.online;
@@ -15,17 +11,6 @@ public class LogIn {
         Insert app = new Insert();
         app.insertUser(name, surname, username, password, email);
     }
-    
-    private Connection connect(){
-        String url = "jdbc:sqlite:C://sqlite/SSSIT.db";
-        Connection conn = null;
-        try{
-            conn = DriverManager.getConnection(url);
-        }catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
-        return conn;
-        }
     
     public  void SignUp(Scanner scanner) {      
         System.out.println("Enter your name:");

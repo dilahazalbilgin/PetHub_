@@ -6,11 +6,11 @@ import static pethub.PetHub.online;
 public class LogIn {
     //deneme
     
-    public void register(String name, String surname,String username, String password, String email) {
+   /* public void register(String name, String surname,String username, String password, String email) {
         //Creating user
         Insert app = new Insert();
         app.insertUser(name, surname, username, password, email);
-    }
+    }*/
     
     public  static void SignUp(Scanner scanner) { 
         Insert newUser=new Insert();

@@ -44,9 +44,8 @@ public class Animal_WantingTo_Own extends User{
             String answer0=keyb.nextLine();
             String cevap=keyb.nextLine();
             if(cevap.equalsIgnoreCase("yes")){
-            Animal_Owner.Post(answer0, answer0, answer0, answer0);
             
-            //Animal_Owner.Post(answer0, answer2, answer1, answer4);
+            
             }             
         }else if(n1==2){System.out.println("Do you want to see cat'a post?");
         String answer0=keyb.nextLine();

@@ -12,11 +12,13 @@ public class PetHub {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine(); 
+        
+        
 
         if (choice == 1) {
             LogIn.SignIn(scanner);
         } else if (choice == 2) {
-            LogIn.SignUp(scanner);
+            //LogIn.SignUp(scanner);
         } else {
             System.out.println("Invalid choice!");
         }

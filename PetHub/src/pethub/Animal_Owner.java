@@ -24,13 +24,12 @@ public class Animal_Owner extends User {
         System.out.println("Add detail: ");
         String answer4=keyb.nextLine();
         
-            System.out.println("Do you want to see your post?");
-            String press=keyb.nextLine();
-            if(press.equals("yes")){
-                boolean result=Post(answer,answer2,answer1,answer4);
+            System.out.println("------Your Post-------");
+            
+                boolean result=Post(answer1,answer2,answer4);
                  if(result){
               }
-             }}
+             }
         return true;
     }
     public static boolean Post(String answer){
@@ -38,16 +37,14 @@ public class Animal_Owner extends User {
         }
     return true;}
     
-    public static boolean Post(String answer,String answer2,String answer1,String answer4){
-        if(answer.equals("yes")){
+    public static boolean Post(String answer1,String answer2,String answer4){      
             if(answer1.equalsIgnoreCase("dog")||answer1.equalsIgnoreCase("cat")||answer1.equalsIgnoreCase("fish")||answer1.equalsIgnoreCase("bird")){
             System.out.println("Animal is: "+ answer1);
             System.out.println("Their owner give him/his because: "+answer2);
             System.out.println("Detail is: "+ answer4);
         }      
     return true;
-        }
-        return false;
+        
     }
     
     @Override

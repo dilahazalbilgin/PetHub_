@@ -1,12 +1,48 @@
 package pethub;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Scanner;
 import static pethub.PetHub.numberOfEntries;
 import static pethub.PetHub.online;
 
 public class LogIn {
-    public static void SignUp(Scanner scanner) {
-        System.out.println("Enter your name:");
+    public void register(String name,String surname,String username,String password,String email){
+    LogIn a=new LogIn();
+    a.register(name, surname, username, password, email);
+    }
+    
+    private Connection connect(){
+        String url = "jdbc:sqlite:C://sqlite/SSSIT.db";
+        Connection conn = null;
+        try{
+            conn = DriverManager.getConnection(url);
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return conn;
+        }
+    
+    public  void SignUp(Scanner scanner,String name,String surname,String username,String password,String email) {
+        String sql = "INSERT INTO Users(name, surname,username,password,email) VALUES(?,?,?,?,?)";
+        try{
+            Connection conn = this.connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,name);
+            pstmt.setString(2,surname);
+            pstmt.setString(3,username);
+            pstmt.setString(4,password);
+            pstmt.setString(5,email);
+            pstmt.executeUpdate();
+            System.out.println("User registered successfully");
+        } catch (SQLException e){
+            System.out.println("Username or email has already taken");
+        }
+ 
+        
+        
+        /*System.out.println("Enter your name:");
         String name = scanner.nextLine();
         System.out.println("Enter your surname:");
         String surname = scanner.nextLine();
@@ -16,7 +52,7 @@ public class LogIn {
 
         User newUser = User.createAccount(name, surname, phoneNumber);
         System.out.println("Account created successfully!");
-        newUser.Information();
+        newUser.Information();*/
     }
 
     public static void SignIn(Scanner scanner) {
@@ -38,7 +74,7 @@ public class LogIn {
                             int enter=scanner.nextInt();
                             if(enter==1){Animal_Owner.AddPost();}
                             else if(press==2){
-                             Animal_Owner.Post(password, password, password, password);}
+                             }
                             else{System.out.println("Please press 1 or 2 ");}
                         }else if(press==2){
                             System.out.println("Please enter the action you are the perform");

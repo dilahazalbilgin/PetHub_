@@ -8,10 +8,7 @@ import static pethub.PetHub.numberOfEntries;
 import static pethub.PetHub.online;
 
 public class LogIn {
-    public void register(String name,String surname,String username,String password,String email){
-    LogIn a=new LogIn();
-    a.register(name, surname, username, password, email);
-    }
+    
     
     private Connection connect(){
         String url = "jdbc:sqlite:C://sqlite/SSSIT.db";

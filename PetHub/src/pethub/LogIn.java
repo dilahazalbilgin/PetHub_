@@ -12,8 +12,8 @@ public class LogIn {
     
     public void register(String name, String surname,String username, String password, String email) {
         //Creating user
-        LogIn app = new LogIn();
-        app.SignUp( name, surname, username, password, email);
+        Insert app = new Insert();
+        app.insertUser(name, surname, username, password, email);
     }
     
     private Connection connect(){
@@ -27,26 +27,9 @@ public class LogIn {
         return conn;
         }
     
-    public  void SignUp(String name,String surname,String username,String password,String email) {
-        String sql = "INSERT INTO Users(name, surname,username,password,email) VALUES(?,?,?,?,?)";
-        try{
-            Connection conn = this.connect();
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1,name);
-            pstmt.setString(2,surname);
-            pstmt.setString(3,username);
-            pstmt.setString(4,password);
-            pstmt.setString(5,email);
-            pstmt.executeUpdate();
-            System.out.println("User registered successfully");
-        } catch (SQLException e){
-            System.out.println("Username or email has already taken");
-        }
- 
-        
-        
-        /*System.out.println("Enter your name:");
-        String name = scanner.nextLine();
+    public  void SignUp(Scanner scanner) {      
+        System.out.println("Enter your name:");
+        String name=scanner.nextLine();
         System.out.println("Enter your surname:");
         String surname = scanner.nextLine();
         System.out.println("Enter your phone number:");
@@ -55,7 +38,7 @@ public class LogIn {
 
         User newUser = User.createAccount(name, surname, phoneNumber);
         System.out.println("Account created successfully!");
-        newUser.Information();*/
+        newUser.Information();
     }
 
     public static void SignIn(Scanner scanner) {

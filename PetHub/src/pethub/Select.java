@@ -66,6 +66,29 @@ public class Select {
             System.out.println(e.getMessage());  
         }  
     }
+    
+public void selectAnimalBySpecies(String species) {  
+    String sql = "SELECT * FROM Animal WHERE animalSpecies = '" + species + "'";  
+      
+    try {  
+        Connection conn = this.connect();  
+        Statement stmt  = conn.createStatement();  
+        ResultSet rs    = stmt.executeQuery(sql);  
+          
+        while (rs.next()) {  
+            System.out.println(rs.getInt("id") +  "\t" +   
+                               rs.getString("name") + "\t" +  
+                               rs.getInt("age") + "\t" +
+                               rs.getString("animalSpecies") + "\t" +
+                               rs.getString("reproductive") + "\t" +
+                               rs.getString("gender") + "\t" +
+                               rs.getInt("owner_id") + "\t");
+        }  
+    } catch (SQLException e) {  
+        System.out.println(e.getMessage());  
+    }  
+}
+
 
     
     public void selectAllPosts() {  
@@ -87,5 +110,7 @@ public class Select {
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
-    }  
+    }
+    
+    
 }

@@ -21,10 +21,20 @@ public class PetHub {
         } else {
             System.out.println("Please try again");
         }
-      Select app = new Select();
-      app.selectAllUsers();
-      app.selectAllAnimals();
-      app.selectAllPosts();
+      Select selectApp = new Select();
+     // app.selectAllUsers();
+     // app.selectAllAnimals();
+     // app.selectAllPosts();
+     selectApp.selectAnimalBySpecies("dog");
+     selectApp.selectAnimalBySpecies("cat");
+     selectApp.selectAnimalBySpecies("fish");
+     selectApp.selectAnimalBySpecies("bird");
+     
+     Insert insertApp = new Insert();
+     //insertApp.insertAnimal(name, choice, animalSpecies, reproductive, gender, choice);
+         
+     
+     
 
     }
     

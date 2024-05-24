@@ -1,5 +1,9 @@
 package pethub;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -82,15 +86,27 @@ public class LogIn {
     }
 
     public static boolean login(String username, String password) {
-        if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
-            return true;
-        } else {
-            numberOfEntries--;
-            System.out.println("Incorrect username or password!");
-            if (numberOfEntries == 0) {
-                online = false;
+       String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
+
+        try (Connection conn = NewClass.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                return true;
+            } else {
+                numberOfEntries--;
+                System.out.println("Incorrect username or password!");
+                if (numberOfEntries == 0) {
+                    online = false;
+                }
+                return false;
             }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
             return false;
         }
-    }
+    } 
 }

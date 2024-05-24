@@ -14,9 +14,6 @@ public class YorumSatırlarınıAtmakİçinSayfa {
             //a1.informationOfAWTO();
             //}  
 }
-
-
-
            /* Dog d1=new Dog("d",5,"d","d","k","d,",true);
             Cat a=new Cat("d",5,"d","d","k","d,",true);
             Fish b=new Fish("d",5,"d","d","k","d,",true);

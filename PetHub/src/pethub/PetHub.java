@@ -20,7 +20,10 @@ public class PetHub {
         } else {
             System.out.println("Please try again");
         }
-
+      Select app = new Select();
+      app.selectAllUsers();
+      app.selectAllAnimals();
+      app.selectAllPosts();
 
     }
     

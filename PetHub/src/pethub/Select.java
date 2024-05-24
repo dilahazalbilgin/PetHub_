@@ -20,9 +20,56 @@ public class Select {
         return conn;  
     }  
    
-  
-    public void selectAll(){  
-        String sql = "SELECT * FROM user";  
+    
+    public void selectAllUsers(){  
+        String sql = "SELECT * FROM User";  
+          
+        try {  
+            Connection conn = this.connect();  
+            Statement stmt  = conn.createStatement();  
+            ResultSet rs    = stmt.executeQuery(sql);  
+              
+              
+            while (rs.next()) {  
+                System.out.println(rs.getInt("id") +  "\t" +   
+                                   rs.getString("name") + "\t" +  
+                                   rs.getString("surname") + "\t" +
+                                   rs.getString("username") + "\t" +
+                                   rs.getString("phoneNumber") + "\t" +
+                                   rs.getString("password") + "\t");
+            }  
+        } catch (SQLException e) {  
+            System.out.println(e.getMessage());  
+        }  
+    }
+
+    
+    public void selectAllAnimals() {  
+        String sql = "SELECT * FROM Animal";  
+          
+        try {  
+            Connection conn = this.connect();  
+            Statement stmt  = conn.createStatement();  
+            ResultSet rs    = stmt.executeQuery(sql);  
+              
+              
+            while (rs.next()) {  
+                System.out.println(rs.getInt("id") +  "\t" +   
+                                   rs.getString("name") + "\t" +  
+                                   rs.getInt("age") + "\t" +
+                                   rs.getString("animalSpecies") + "\t" +
+                                   rs.getString("reproductive") + "\t" +
+                                   rs.getString("gender") + "\t" +
+                                   rs.getInt("owner_id") + "\t");
+            }  
+        } catch (SQLException e) {  
+            System.out.println(e.getMessage());  
+        }  
+    }
+
+    
+    public void selectAllPosts() {  
+        String sql = "SELECT * FROM Post";  
           
         try {  
             Connection conn = this.connect();  
@@ -32,20 +79,13 @@ public class Select {
             // loop through the result set  
             while (rs.next()) {  
                 System.out.println(rs.getInt("id") +  "\t" +   
-                                   rs.getString("name") + "\t" +  
-                                   rs.getString("surname") + "\t" +
-                                   rs.getString("username") + "\t" +
-                                   rs.getString("phoneNumber") + "\t" +
-                                   rs.getString("password") + "\t");
-
-
+                                   rs.getString("yes_no") + "\t" +  
+                                   rs.getString("which_animal") + "\t" +
+                                   rs.getString("why") + "\t" +
+                                   rs.getString("add_detail") + "\t");
             }  
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
         }  
     }  
-      
-     
-
-
-}  
+}

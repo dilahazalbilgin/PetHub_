@@ -1,31 +1,31 @@
 package pethub;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
-import static pethub.PetHub.numberOfEntries;
-import static pethub.PetHub.online;
 
 public class LogIn {
-    //deneme
-    
-   /* public void register(String name, String surname,String username, String password, String email) {
-        //Creating user
-        Insert app = new Insert();
-        app.insertUser(name, surname, username, password, email);
-    }*/
-    
-    public  static void SignUp(Scanner scanner) { 
+    static boolean online = true;
+    static int numberOfEntries = 3;
+    static Map<String, String> userDatabase = new HashMap<>();
+
+    public static void SignUp(Scanner scanner) { 
         Insert newUser=new Insert();
-        System.out.println(" Please enter the name");
-        String name1=scanner.nextLine();
+        System.out.println("Please enter the name");
+        String name1 = scanner.nextLine();
         System.out.println("Please enter the surname");
-        String name2=scanner.nextLine();
+        String name2 = scanner.nextLine();
         System.out.println("Please enter the username");
-        String name3=scanner.nextLine();
+        String username = scanner.nextLine();
         System.out.println("Please enter the phone number");
-        String name4=scanner.nextLine();
-        System.out.println("Please create password");
-        String name5=scanner.nextLine();
+        String phoneNumber = scanner.nextLine();
+        System.out.println("Please create a password");
+        String password = scanner.nextLine();
         
-         newUser.insertUser(name1,name2,name3,name4,name5);     
+        newUser.insertUser(name1,name2,username,phoneNumber,password);  
+        userDatabase.put(username, password);     
+        System.out.println("Your account has been created successfully, please log in");
+        SignIn(scanner);
     }
 
     public static void SignIn(Scanner scanner) {
@@ -39,23 +39,33 @@ public class LogIn {
                     boolean result = login(username, password);
                     if (result) {
                         System.out.println("Login successful!");
-                        System.out.println("Are you animal owner or animal wanting to own?\nIf you animal owner please press to 1\nIf you want to animal own please press to 2");
-                        int press=scanner.nextInt();
-                        if(press==1){
-                            System.out.println("Please enter the action you are the perform");
+                        System.out.println("Are you an animal owner or wanting to own an animal?\nIf you are an animal owner, please press 1\nIf you want to own an animal, please press 2");
+                        int press = scanner.nextInt();
+                        scanner.nextLine(); // Consume newline
+                        if (press == 1) {
+                            System.out.println("Please enter the action you want to perform");
                             System.out.println("1-Add Post\n2-See Post");
-                            int enter=scanner.nextInt();
-                            if(enter==1){Animal_Owner.AddPost();}
-                            else if(press==2){
-                             }
-                            else{System.out.println("Please press 1 or 2 ");}
-                        }else if(press==2){
-                            System.out.println("Please enter the action you are the perform");
+                            int enter = scanner.nextInt();
+                            scanner.nextLine(); 
+                            if (enter == 1) {
+                                Animal_Owner.AddPost();
+                            } else if (enter == 2) {
+                                
+                            } else {
+                                System.out.println("Please press 1 or 2");
+                            }
+                        } else if (press == 2) {
+                            System.out.println("Please enter the action you want to perform");
                             System.out.println("1-Add Info\n2-Want Animal");
-                            int enter1=scanner.nextInt();
-                            if(enter1==1){Animal_WantingTo_Own.Add();}
-                            else if(enter1==2){Animal_WantingTo_Own.WantsAnimal();}
-                            else{System.out.println("Please press 1 or 2 ");}
+                            int enter1 = scanner.nextInt();
+                            scanner.nextLine(); // Consume newline
+                            if (enter1 == 1) {
+                                Animal_WantingTo_Own.Add();
+                            } else if (enter1 == 2) {
+                                Animal_WantingTo_Own.WantsAnimal();
+                            } else {
+                                System.out.println("Please press 1 or 2");
+                            }
                         }
                         break;
                     } else {
@@ -63,9 +73,6 @@ public class LogIn {
                             online = false;
                             break;
                         }
-                    }
-                    if (!online) {
-                        System.out.println("Your attempts have been exhausted!");
                     }
                 }
             } else {
@@ -75,9 +82,7 @@ public class LogIn {
     }
 
     public static boolean login(String username, String password) {
-        if (username.equals("hazal") && password.equals("6161")) {
-            return true;
-        } else if (username.equals("eje") && password.equals("1907")) {
+        if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
             return true;
         } else {
             numberOfEntries--;
@@ -86,5 +91,6 @@ public class LogIn {
                 online = false;
             }
             return false;
-
-        }}}
+        }
+    }
+}

@@ -12,9 +12,9 @@ public class LogIn {
     public static void SignUp(Scanner scanner) { 
         Insert newUser=new Insert();
         System.out.println("Please enter the name");
-        String name1 = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Please enter the surname");
-        String name2 = scanner.nextLine();
+        String surname = scanner.nextLine();
         System.out.println("Please enter the username");
         String username = scanner.nextLine();
         System.out.println("Please enter the phone number");
@@ -22,7 +22,7 @@ public class LogIn {
         System.out.println("Please create a password");
         String password = scanner.nextLine();
         
-        newUser.insertUser(name1,name2,username,phoneNumber,password);  
+        newUser.insertUser(name,surname,username,phoneNumber,password);  
         userDatabase.put(username, password);     
         System.out.println("Your account has been created successfully, please log in");
         SignIn(scanner);
@@ -41,7 +41,7 @@ public class LogIn {
                         System.out.println("Login successful!");
                         System.out.println("Are you an animal owner or wanting to own an animal?\nIf you are an animal owner, please press 1\nIf you want to own an animal, please press 2");
                         int press = scanner.nextInt();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
                         if (press == 1) {
                             System.out.println("Please enter the action you want to perform");
                             System.out.println("1-Add Post\n2-See Post");
@@ -58,7 +58,7 @@ public class LogIn {
                             System.out.println("Please enter the action you want to perform");
                             System.out.println("1-Add Info\n2-Want Animal");
                             int enter1 = scanner.nextInt();
-                            scanner.nextLine(); // Consume newline
+                            scanner.nextLine(); 
                             if (enter1 == 1) {
                                 Animal_WantingTo_Own.Add();
                             } else if (enter1 == 2) {

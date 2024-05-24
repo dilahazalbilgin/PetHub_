@@ -21,10 +21,10 @@ public abstract class Animals {
         return true;
     }
     
-    public static boolean AnimalPost(){
+    public static boolean AnimalPost(String story){
         System.out.println("-----Animal Post------");
         Animal_Owner.AddPost();
-        
+        System.out.println(story);
         
         return true;
     }

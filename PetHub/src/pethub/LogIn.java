@@ -64,7 +64,7 @@ public class LogIn {
                             int enter1 = scanner.nextInt();
                             scanner.nextLine(); 
                             if (enter1 == 1) {
-                                Animal_WantingTo_Own.Add();
+                                Animal_WantingTo_Own.AddInfo();
                             } else if (enter1 == 2) {
                                 Animal_WantingTo_Own.WantsAnimal();
                             } else {

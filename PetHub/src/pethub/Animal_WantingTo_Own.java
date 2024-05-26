@@ -20,10 +20,12 @@ public class Animal_WantingTo_Own extends User{
         super(name, surname, phoneNumber);
         this.petNumber = petNumber;
     }  
-    public static boolean Add(){  
+    public static boolean AddInfo(){
         System.out.println("what is your gender?");
         Scanner keyb=new Scanner(System.in);
-        String gender1=keyb.nextLine();
+        String gender=keyb.nextLine();
+        System.out.println("Where do you live?");
+        String location=keyb.nextLine();
         System.out.println("do you have an animal?");
         String a1=keyb.nextLine();
         if(a1.equals("yes")){
@@ -31,10 +33,12 @@ public class Animal_WantingTo_Own extends User{
             String a2=keyb.nextLine();
             System.out.println("your animals: " + a2);
         }else{System.out.println("First animalll");}
-        System.out.println("Your gender is: " +gender1);
+        System.out.println("Your gender is: " +gender);
+        System.out.println("Your location is"+location);
         return true;
     }   
         public static boolean WantsAnimal(){
+        Select select = new Select();
         System.out.println("Which animal do you want to adopt?: ");
         Scanner keyb=new Scanner(System.in);
         System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");
@@ -44,23 +48,26 @@ public class Animal_WantingTo_Own extends User{
             String answer0=keyb.nextLine();
             String cevap=keyb.nextLine();
             if(cevap.equalsIgnoreCase("yes")){
-            
-            
+                select.selectAnimalBySpecies("dog");
             }             
         }else if(n1==2){System.out.println("Do you want to see cat'a post?");
         String answer0=keyb.nextLine();
         String cevap1=keyb.nextLine();
         if(cevap1.equalsIgnoreCase("yes")){
-        
+          select.selectAnimalBySpecies("cat");
         }
         }else if(n1==3){System.out.println("Do you want to see bird'a post?");
         String answer0=keyb.nextLine();
         String cevap2=keyb.nextLine();
-        if(cevap2.equalsIgnoreCase("yes")){}
+        if(cevap2.equalsIgnoreCase("yes")){
+        select.selectAnimalBySpecies("bird");
+        }
         }else if(n1==4){System.out.println("Do you want to see fish'a post?");
         String answer0=keyb.nextLine();
         String cevap3=keyb.nextLine();
-        if(cevap3.equalsIgnoreCase("yes")){}
+        if(cevap3.equalsIgnoreCase("yes")){
+        select.selectAnimalBySpecies("fish");
+        }
         }
         return true;
     }
@@ -68,7 +75,7 @@ public class Animal_WantingTo_Own extends User{
     public void Information(){
         boolean sonuc2=WantsAnimal();
         if(sonuc2){}
-        boolean sonuc1=Add();
+        boolean sonuc1=AddInfo();
         if(sonuc1){}
         
         super.Information();

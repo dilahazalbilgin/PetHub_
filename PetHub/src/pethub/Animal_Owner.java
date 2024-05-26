@@ -1,8 +1,11 @@
 package pethub;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Animal_Owner extends User {
+    static Map<String, String> userDatabase = new HashMap<>();
     private Dog Dog;
     private Cat Cat;
     private Fish Fish;
@@ -19,6 +22,7 @@ public class Animal_Owner extends User {
     public static boolean AddPost() {
         Insert newPost = new Insert();
         Scanner keyb = new Scanner(System.in);
+        System.out.println("Do you want to see or add post");
         System.out.println("Do you want add a post? ");
         String answer1 = keyb.nextLine();
 
@@ -32,12 +36,14 @@ public class Animal_Owner extends User {
 
             newPost.insertPost(answer1, answer2, answer3, answer4);
 
+
             System.out.println("------Your Post-------");
             boolean result = Post(answer2, answer3, answer4);
             if (result) {
                 System.out.println("Post added successfully.");
             }
-        } else {
+        }
+        else {
             System.out.println("Post not added.");
         }
         return true;

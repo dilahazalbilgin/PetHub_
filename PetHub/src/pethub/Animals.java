@@ -36,7 +36,7 @@ public abstract class Animals {
         System.out.println("What is the gender of the animal");
         String gender=keyb.nextLine();
         Animal.insertAnimal(name, age, species, reproductive, gender, 0);
-        System.out.println("Your animal is: name:"+name+" age: "+age+" species: "+ species+" reproductive: "+reproductive+" gender: "+gender);
+        System.out.println("----Your animal----\nname:"+name+"\nage: "+age+"\nspecies: "+ species+"\nreproductive: "+reproductive+"\ngender: "+gender);
         return true;
     }
     

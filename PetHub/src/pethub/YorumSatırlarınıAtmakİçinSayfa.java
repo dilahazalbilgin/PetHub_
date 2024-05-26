@@ -164,3 +164,16 @@ Insert newUser=new Insert();
 
     /*static boolean online = true;
     static int numberOfEntries = 3;*/
+
+//NewClass.connect();
+        //Insert insertApp = new Insert();
+        //insertApp.insertAnimal("boncuk",2, "cat", "yes", "female", 61);
+        
+ //Select selectApp = new Select();
+     //app.selectAllUsers();
+     //selectApp.selectAllAnimals();
+     // app.selectAllPosts();
+     //selectApp.selectAnimalBySpecies("dog");
+     //selectApp.selectAnimalBySpecies("cat");
+     //selectApp.selectAnimalBySpecies("fish");
+     //selectApp.selectAnimalBySpecies("bird");

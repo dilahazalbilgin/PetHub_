@@ -1,11 +1,7 @@
 package pethub;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Animal_Owner extends User {
-    static Map<String, String> userDatabase = new HashMap<>();
     private Dog Dog;
     private Cat Cat;
     private Fish Fish;

@@ -14,10 +14,14 @@ public abstract class Animals {
     }
 
     public static boolean AddStory(){
-        System.out.println("You might add a story,please write it: ");
+        System.out.println("Do you want to add a story");
         Scanner keyb=new Scanner(System.in);
-        String story=keyb.nextLine();
-        System.out.println("Your story is: " +story);
+        String answer=keyb.nextLine();
+        if(answer.equalsIgnoreCase("yes")){
+            System.out.println("Please write a story:");
+             String story=keyb.nextLine();
+             System.out.println("Your story is: " +story);
+        }else{System.out.println("Story doesn't have");}
         return true;
     }
     
@@ -39,15 +43,6 @@ public abstract class Animals {
         System.out.println("----Your animal----\nname:"+name+"\nage: "+age+"\nspecies: "+ species+"\nreproductive: "+reproductive+"\ngender: "+gender);
         return true;
     }
-    
-    public static boolean AnimalPost(String story){
-        System.out.println("-----Animal Post------");
-        Animal_Owner.AddPost();
-        System.out.println(story);
-        
-        return true;
-    }
-
     
     public void AnimalInformation(){
         boolean sonuc1=AddStory();

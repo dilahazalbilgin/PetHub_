@@ -56,6 +56,7 @@ public class Animal_Owner extends User {
     public static boolean Post(String answer1, String answer2, String answer4) {
         if (answer1.equalsIgnoreCase("dog") || answer1.equalsIgnoreCase("cat") ||
             answer1.equalsIgnoreCase("fish") || answer1.equalsIgnoreCase("bird")) {
+            Animals.AddStory();
             System.out.println("Animal is: " + answer1);
             System.out.println("Their owner give him/her because: " + answer2);
             System.out.println("Detail is: " + answer4);
@@ -70,12 +71,6 @@ public class Animal_Owner extends User {
         System.out.println(Cat);
         System.out.println(Fish);
         System.out.println(Bird);
-        Scanner keyb = new Scanner(System.in);
-        System.out.println("If you want to see your post press 1");
-        String press1 = keyb.nextLine();
-        if (press1.equals("1")) {
-            // boolean result = Post();
-        }
     }
 
     public Cat getCat() {

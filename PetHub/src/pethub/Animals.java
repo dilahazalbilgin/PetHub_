@@ -1,17 +1,20 @@
 package pethub;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class Animals {
+    private List<Gendered> pets;
     protected String name;
     protected String animalSpecies;
     protected int animalAge;
     protected boolean reproductive;
-    
-    
+
     public Animals(String name,String animalSpecies, int animalAge) {
         this.name=name;
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
+        pets=new ArrayList<>();
     }
 
     public static boolean AddStory(){
@@ -51,8 +54,21 @@ public abstract class Animals {
         System.out.println("Animal age: " +animalAge);
     }
     
-    public abstract void makeSound();
+    public abstract void MakeSound();
     
+    public void InitializePets() {
+        for (Gendered pet : pets) {
+            pet.setGender("Female");
+            pet.setReproductive(true);
+        }
+    }
+    public void PrintPetDetails() {
+        for (Gendered pet : pets) {
+            System.out.println("Pet gender: " + pet.getGender());
+            System.out.println("Is reproductive: " + pet.isReproductive());
+        }
+    }
+  
     public String getAnimalSpecies() {
         return animalSpecies;
     }

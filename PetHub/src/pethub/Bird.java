@@ -13,7 +13,7 @@ public class Bird extends Animals implements Gendered{
     }
 
     @Override
-    public void makeSound() {
+    public void MakeSound() {
         System.out.println("Is it make a sound?");
         Scanner keyb=new Scanner(System.in);
         String sound=keyb.nextLine();

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class PetHub {
     public static void main(String[] args) {
-       
         //NewClass.connect();
         //Insert insertApp = new Insert();
         //insertApp.insertAnimal("boncuk",2, "cat", "yes", "female", 61);

@@ -21,6 +21,25 @@ public abstract class Animals {
         return true;
     }
     
+    public static boolean AddAnimal(){
+        Insert Animal=new Insert();
+        Scanner keyb=new Scanner(System.in);
+        System.out.println("What is the name of the animal ");
+        String name=keyb.nextLine();
+        System.out.println("What is the age of the animal ");
+        int age=keyb.nextInt();
+        System.out.println("What is the species of the animal");
+        String a=keyb.nextLine();
+        String species=keyb.nextLine();
+        System.out.println("Can it mate");
+        String reproductive=keyb.nextLine();
+        System.out.println("What is the gender of the animal");
+        String gender=keyb.nextLine();
+        Animal.insertAnimal(name, age, species, reproductive, gender, 0);
+        System.out.println("Your animal is: name:"+name+" age: "+age+" species: "+ species+" reproductive: "+reproductive+" gender: "+gender);
+        return true;
+    }
+    
     public static boolean AnimalPost(String story){
         System.out.println("-----Animal Post------");
         Animal_Owner.AddPost();

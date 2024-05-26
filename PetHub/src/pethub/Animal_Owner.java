@@ -48,7 +48,7 @@ public class Animal_Owner extends User {
            selectPost.selectAllPosts();          
         }
         else {
-            System.out.println("Post not added.");
+            System.out.println("Your choice is invalid.");
         }
         return true;
     }

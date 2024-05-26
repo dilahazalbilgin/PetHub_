@@ -47,7 +47,14 @@ public class LogIn {
                         int press = scanner.nextInt();
                         scanner.nextLine();
                         if (press == 1) {
-                                Animal_Owner.AddPost();                     
+                                System.out.println("Do you want to add an animal to the system or a post?");
+                                System.out.println("1-Add Animal\n2-Add Post");
+                                int select=scanner.nextInt();
+                                if(select==1){
+                                    Animals.AddAnimal();
+                                }else if(select==2){
+                                   Animal_Owner.AddPost();   
+                                }                  
                         } else if (press == 2) {
                             System.out.println("Please enter the action you want to perform");
                             System.out.println("1-Add Info\n2-Want Animal");

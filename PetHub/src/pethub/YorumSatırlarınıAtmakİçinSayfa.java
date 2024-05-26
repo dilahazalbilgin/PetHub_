@@ -199,3 +199,17 @@ Insert newUser=new Insert();
             User[] k=new User[2];
             for(User t:k){
             a.Information();*/
+
+    /*Animals petmanager=new Animals();
+    
+    petmanager.add(new Dog("k",6,"k","j",false));
+    petmanager.add(new Cat("k",6,"k","j",false));
+    
+        for (Gendered pet : petmanager) {
+            pet.setGender("Female");
+            pet.setReproductive(true);
+            System.out.println("Pet gender: " + pet.getGender());
+            System.out.println("Is reproductive: " + pet.isReproductive());
+        }*/
+    
+        

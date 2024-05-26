@@ -21,12 +21,12 @@ public class Animal_Owner extends User {
 
     public static boolean AddPost() {
         Insert newPost = new Insert();
+        Select selectPost = new Select();
         Scanner keyb = new Scanner(System.in);
         System.out.println("Do you want to see or add post");
-        System.out.println("Do you want add a post? ");
         String answer1 = keyb.nextLine();
 
-        if (answer1.equalsIgnoreCase("yes")) {
+        if (answer1.equalsIgnoreCase("add")) {
             System.out.println("Which animal do you want to give to someone?");
             String answer2 = keyb.nextLine();
             System.out.println("Why do you want to give away your pet?: ");
@@ -42,6 +42,10 @@ public class Animal_Owner extends User {
             if (result) {
                 System.out.println("Post added successfully.");
             }
+        }
+        else if(answer1.equalsIgnoreCase("see")){
+           System.out.println("------Posts-------");
+           selectPost.selectAllPosts();          
         }
         else {
             System.out.println("Post not added.");

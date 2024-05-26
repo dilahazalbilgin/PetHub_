@@ -185,3 +185,17 @@ Insert newUser=new Insert();
         a[0]=d;
         for (Animals k:a) {
             k.AnimalInformation();*/
+
+
+        
+        /*Dog d=new Dog("saj",5,"s","s",true);
+        Cat c=new Cat("a",5,"s","s",false);  
+        Fish f=new Fish("a",5,"s","s",false);
+        Bird b=new Bird("a",5,"s","s",false);
+        
+        
+        
+            Animal_Owner a=new Animal_Owner("hakan","fidan",56431,d,c,f,b);
+            User[] k=new User[2];
+            for(User t:k){
+            a.Information();*/

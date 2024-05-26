@@ -9,6 +9,7 @@ public abstract class Animals {
     
     
     public Animals(String name,String animalSpecies, int animalAge) {
+        this.name=name;
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
     }
@@ -41,12 +42,11 @@ public abstract class Animals {
         String gender=keyb.nextLine();
         Animal.insertAnimal(name, age, species, reproductive, gender, 0);
         System.out.println("----Your animal----\nname:"+name+"\nage: "+age+"\nspecies: "+ species+"\nreproductive: "+reproductive+"\ngender: "+gender);
+
         return true;
     }
     
     public void AnimalInformation(){
-        boolean sonuc1=AddStory();
-        if(sonuc1){}
         System.out.println("Animal Species: " +animalSpecies);
         System.out.println("Animal age: " +animalAge);
     }

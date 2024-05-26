@@ -177,3 +177,11 @@ Insert newUser=new Insert();
      //selectApp.selectAnimalBySpecies("cat");
      //selectApp.selectAnimalBySpecies("fish");
      //selectApp.selectAnimalBySpecies("bird");
+
+
+
+        /*Dog d=new Dog("g",6,"d","d,","s");
+        Animals[] a=new Animals[1];
+        a[0]=d;
+        for (Animals k:a) {
+            k.AnimalInformation();*/

@@ -3,7 +3,7 @@ public class Fish extends Animals implements Gendered{
     private String gender;
     private boolean reproductive;
     
-    public Fish(String name,String animalSpecies, int animalAge, String gender, boolean reproductive) {
+    public Fish(String name, int animalAge,String animalSpecies, String gender, boolean reproductive) {
         super(name, animalSpecies, animalAge);
         this.gender = gender;
         this.reproductive = reproductive;
@@ -12,6 +12,10 @@ public class Fish extends Animals implements Gendered{
     @Override
     public void makeSound() {
         System.out.println("fish doesnt make noise"); 
+    }
+    @Override
+    public String toString() {
+        return "Fish{name='" + name + "', age=" + animalAge + ", Species='" + animalSpecies + "', gender='" + gender + "', reproductive=" + reproductive + "}";
     }
 
     @Override

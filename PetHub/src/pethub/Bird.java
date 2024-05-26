@@ -1,4 +1,7 @@
 package pethub;
+
+import java.util.Scanner;
+
 public class Bird extends Animals implements Gendered{
     private String gender;
     private boolean reproductive;
@@ -11,7 +14,12 @@ public class Bird extends Animals implements Gendered{
 
     @Override
     public void makeSound() {
-        System.out.println("bird sings");
+        System.out.println("Is it make a sound?");
+        Scanner keyb=new Scanner(System.in);
+        String sound=keyb.nextLine();
+        if(sound.equalsIgnoreCase("yes")){
+            System.out.println("It's a noisy bird!");
+        }else{System.out.println("I's a quite bird");} 
     }
     @Override
     public String toString() {

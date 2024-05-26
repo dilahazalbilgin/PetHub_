@@ -11,7 +11,7 @@ public class Fish extends Animals implements Gendered{
 
     @Override
     public void makeSound() {
-        System.out.println("fish doesnt make noise"); 
+        System.out.println("Fish doesnt make noise"); 
     }
     @Override
     public String toString() {

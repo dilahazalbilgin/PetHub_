@@ -50,25 +50,27 @@ public class Animal_WantingTo_Own extends User{
             if(cevap.equalsIgnoreCase("yes")){
                 select.selectAnimalBySpecies("dog");
             }             
-        }else if(n1==2){System.out.println("Do you want to see cat'a post?");
-        String answer0=keyb.nextLine();
-        String cevap1=keyb.nextLine();
+        }else if(n1==2){
+            System.out.println("Do you want to see cat'a post?");
+            String answer0=keyb.nextLine();
+            String cevap1=keyb.nextLine();
         if(cevap1.equalsIgnoreCase("yes")){
-          select.selectAnimalBySpecies("cat");
+            select.selectAnimalBySpecies("cat");
         }
-        }else if(n1==3){System.out.println("Do you want to see bird'a post?");
-        String answer0=keyb.nextLine();
-        String cevap2=keyb.nextLine();
+        }else if(n1==3){
+            System.out.println("Do you want to see bird'a post?");
+            String answer0=keyb.nextLine();
+            String cevap2=keyb.nextLine();
         if(cevap2.equalsIgnoreCase("yes")){
-        select.selectAnimalBySpecies("bird");
+            select.selectAnimalBySpecies("bird");
         }
-        }else if(n1==4){System.out.println("Do you want to see fish'a post?");
-        String answer0=keyb.nextLine();
-        String cevap3=keyb.nextLine();
+        }else if(n1==4){
+            System.out.println("Do you want to see fish'a post?");
+            String answer0=keyb.nextLine();
+            String cevap3=keyb.nextLine();
         if(cevap3.equalsIgnoreCase("yes")){
-        select.selectAnimalBySpecies("fish");
-        }
-        }
+            select.selectAnimalBySpecies("fish");
+        }}
         return true;
     }
     @Override
@@ -76,10 +78,8 @@ public class Animal_WantingTo_Own extends User{
         boolean sonuc2=WantsAnimal();
         if(sonuc2){}
         boolean sonuc1=AddInfo();
-        if(sonuc1){}
-        
+        if(sonuc1){}  
         super.Information();
-        
     }
     public int getPetNumber() {
         return petNumber;

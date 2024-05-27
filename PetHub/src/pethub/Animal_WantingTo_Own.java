@@ -38,7 +38,7 @@ public class Animal_WantingTo_Own extends User{
         return true;
     }   
         public static boolean WantsAnimal(){
-        Select select = new Select();
+        DataBaseOperation select = new DataBaseOperation();
         System.out.println("Which animal do you want to adopt?: ");
         Scanner keyb=new Scanner(System.in);
         System.out.println("1-Dog\n2-Cat\n3-Bird\n4-Fish");

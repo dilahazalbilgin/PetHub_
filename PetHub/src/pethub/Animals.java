@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Animals {
+    private Dog Dog;
+    private Cat Cat;
+    private Fish Fish;
+    private Bird Bird;
     private List<Gendered> pets;
     protected String name;
     protected String animalSpecies;
@@ -30,7 +34,7 @@ public abstract class Animals {
     }
     
     public static boolean AddAnimal(){
-        Insert Animal=new Insert();
+        DataBaseOperation Animal=new DataBaseOperation();
         Scanner keyb=new Scanner(System.in);
         System.out.println("What is the name of the animal ");
         String name=keyb.nextLine();
@@ -52,6 +56,10 @@ public abstract class Animals {
     public void AnimalInformation(){
         System.out.println("Animal Species: " +animalSpecies);
         System.out.println("Animal age: " +animalAge);
+        System.out.println(Dog);
+        System.out.println(Cat);
+        System.out.println(Fish);
+        System.out.println(Bird);
     }
     
     public abstract void MakeSound();

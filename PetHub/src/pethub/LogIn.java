@@ -1,6 +1,7 @@
 package pethub;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +13,8 @@ public class LogIn {
     static boolean online = true;
     static int numberOfEntries = 3;
     static Map<String, String> userDatabase = new HashMap<>();
-
+    
+    
     public static void SignUp(Scanner scanner) { 
         Insert newUser=new Insert();
         System.out.println("Please enter the name");
@@ -81,11 +83,22 @@ public class LogIn {
             }
         }
     }
+    private static Connection connect() {
+        Connection conn = null;
+        String url = "jdbc:sqlite:C:/sqlite/SSSIT.db"; 
+        try {
+            conn = DriverManager.getConnection(url);
+            System.out.println("Connection to SQLite has been established.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
+    }
 
     public static boolean login(String username, String password) {
        String sql = "SELECT * FROM User WHERE username = ? AND password = ?";
-
-        try (Connection conn = Connection1.connect();
+       
+        try (Connection conn = connect();
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, username);
             pstmt.setString(2, password);

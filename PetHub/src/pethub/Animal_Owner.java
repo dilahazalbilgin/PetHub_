@@ -17,7 +17,7 @@ public class Animal_Owner extends User {
 
     public static boolean AddPost() {
         Insert newPost = new Insert();
-        Select selectPost = new Select();
+        DataBaseOperation selectPost = new DataBaseOperation();
         Scanner keyb = new Scanner(System.in);
         System.out.println("Do you want to see or add post");
         String answer1 = keyb.nextLine();

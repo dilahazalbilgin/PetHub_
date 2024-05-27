@@ -11,9 +11,6 @@ public class PetHub {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine();
-
-        CreateData.createNewDatabase("SSSIT.db");
-        CreateTable.createNewTable();
        
         if (choice == 1) {
             LogIn.SignIn(scanner);

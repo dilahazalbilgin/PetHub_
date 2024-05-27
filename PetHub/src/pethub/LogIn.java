@@ -16,7 +16,7 @@ public class LogIn {
     
     
     public static void SignUp(Scanner scanner) { 
-        Insert newUser=new Insert();
+        DataBaseOperation newUser=new DataBaseOperation();
         System.out.println("Please enter the name");
         String name = scanner.nextLine();
         System.out.println("Please enter the surname");

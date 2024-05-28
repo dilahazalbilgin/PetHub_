@@ -48,7 +48,12 @@ public class Animal_WantingTo_Own extends User{
             String answer0=keyb.nextLine();
             String cevap=keyb.nextLine();
             if(cevap.equalsIgnoreCase("yes")){
-                select.selectAnimalBySpecies("dog");
+        System.out.println("        / \\__");
+        System.out.println("       (    @\\___");
+        System.out.println("       /         O");
+        System.out.println("      /   (_____/");
+        System.out.println("     /_____/ U");
+        select.selectAnimalBySpecies("dog");
             }             
         }else if(n1==2){
             System.out.println("Do you want to see cat'a post?");

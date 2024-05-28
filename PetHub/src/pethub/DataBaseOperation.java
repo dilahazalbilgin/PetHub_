@@ -137,9 +137,7 @@ public void selectAnimalBySpecies(String species) {
         System.out.println(e.getMessage());  
     }  
 }
-
-
-    
+ 
     public void selectAllPosts() {  
         String sql = "SELECT * FROM Post";  
           

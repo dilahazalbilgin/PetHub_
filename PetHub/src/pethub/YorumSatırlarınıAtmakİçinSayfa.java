@@ -212,4 +212,23 @@ Insert newUser=new Insert();
             System.out.println("Is reproductive: " + pet.isReproductive());
         }*/
     
-        
+               /* Dog d=new Dog("saj",5,"s","s",true);
+        Cat c=new Cat("a",5,"s","s",false);  
+        Fish f=new Fish("a",5,"s","s",false);
+        Bird b=new Bird("a",5,"s","s",false);
+        Dog s=new Dog("a",6,"s","d",false);
+            Animals[] k=new Animals[2];
+            for(Animals t:k){
+            s.AnimalInformation();}*/
+
+
+        /*Dog dog=new Dog("Karabas",5,"Dog","Boy",true);
+        Cat cat=new Cat("Suslu",2,"Cat","Girl",false);  
+        Fish fish=new Fish("Nemo",12,"Fish","Girl",true);
+        Bird bird=new Bird("Mavis",1,"Bird","Boy",false);
+
+            Animal_Owner a=new Animal_Owner("Hakan","Fidan",56431,dog,cat,fish,bird);
+            User[] k=new User[1];
+            
+            for(User t:k){
+            a.Information();}*/

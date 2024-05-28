@@ -19,6 +19,7 @@ public abstract class Animals {
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
         pets=new ArrayList<>();
+       List<Gendered> pets = new ArrayList<>();     
     }
 
     public static boolean AddStory(){
@@ -49,17 +50,26 @@ public abstract class Animals {
         String gender=keyb.nextLine();
         Animal.insertAnimal(name, age, species, reproductive, gender, 0);
         System.out.println("----Your animal----\nname:"+name+"\nage: "+age+"\nspecies: "+ species+"\nreproductive: "+reproductive+"\ngender: "+gender);
-
+        
         return true;
     }
     
     public void AnimalInformation(){
         System.out.println("Animal Species: " +animalSpecies);
         System.out.println("Animal age: " +animalAge);
+        pets.add(new Dog(name, animalAge, animalSpecies, "gender", reproductive));
+
+        /*for (Gendered pet : pets) {
+            pet.setGender("Female");
+            pet.setReproductive(true);
+            System.out.println("Pet gender: " + pet.getGender());
+            System.out.println("Is reproductive: " + pet.isReproductive());
+        } */
         System.out.println(Dog);
         System.out.println(Cat);
         System.out.println(Fish);
         System.out.println(Bird);
+        
     }
     
     public abstract void MakeSound();

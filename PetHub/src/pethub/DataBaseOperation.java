@@ -39,8 +39,8 @@ public class DataBaseOperation{
         }
     }
 
-    public void insertAnimal(String name, int age, String animalSpecies, String reproductive, String gender, int ownerId) {
-        String sql = "INSERT INTO Animal(name, age, animalSpecies, reproductive, gender, owner_id) VALUES(?,?,?,?,?,?)";
+    public void insertAnimal(String name, int age, String animalSpecies, String reproductive, String gender) {
+        String sql = "INSERT INTO Animal(name, age, animalSpecies, reproductive, gender) VALUES(?,?,?,?,?)";
 
         try (Connection conn = this.connect(); 
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -49,7 +49,6 @@ public class DataBaseOperation{
             pstmt.setString(3, animalSpecies);
             pstmt.setString(4, reproductive);
             pstmt.setString(5, gender);
-            pstmt.setInt(6, ownerId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -108,8 +107,7 @@ public class DataBaseOperation{
                                    rs.getInt("age") + "\t" +
                                    rs.getString("animalSpecies") + "\t" +
                                    rs.getString("reproductive") + "\t" +
-                                   rs.getString("gender") + "\t" +
-                                   rs.getInt("owner_id") + "\t");
+                                   rs.getString("gender") + "\t");
             }  
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
@@ -130,8 +128,28 @@ public void selectAnimalBySpecies(String species) {
                                rs.getInt("age") + "\t" +
                                rs.getString("animalSpecies") + "\t" +
                                rs.getString("reproductive") + "\t" +
-                               rs.getString("gender") + "\t" +
-                               rs.getInt("owner_id") + "\t");
+                               rs.getString("gender") + "\t"
+                              );
+        }  
+    } catch (SQLException e) {  
+        System.out.println(e.getMessage());  
+    }  
+}
+
+public void selectPostBySpecies(String species) {  
+    String sql = "SELECT * FROM Post WHERE which_animal = '" + species + "'";  
+      
+    try {  
+        this.conn = DriverManager.getConnection(url);  
+        Statement stmt  = conn.createStatement();  
+        ResultSet rs    = stmt.executeQuery(sql);  
+          
+        while (rs.next()) {  
+        System.out.println(rs.getInt("id") +  "\t" +   
+                                   rs.getString("yes_no") + "\t" +  
+                                   rs.getString("which_animal") + "\t" +
+                                   rs.getString("why") + "\t" +
+                                   rs.getString("add_detail") + "\t");
         }  
     } catch (SQLException e) {  
         System.out.println(e.getMessage());  

@@ -60,20 +60,28 @@ public class Animal_WantingTo_Own extends User{
             String answer0=keyb.nextLine();
             String cevap1=keyb.nextLine();
         if(cevap1.equalsIgnoreCase("yes")){
-            select.selectAnimalBySpecies("cat");
+        System.out.println("      /\\_/\\");
+        System.out.println("     ( o.o )");
+        System.out.println("      > ^ <");
+        select.selectAnimalBySpecies("cat");
         }
         }else if(n1==3){
             System.out.println("Do you want to see bird'a post?");
             String answer0=keyb.nextLine();
             String cevap2=keyb.nextLine();
         if(cevap2.equalsIgnoreCase("yes")){
-            select.selectAnimalBySpecies("bird");
+        System.out.println(" \\");
+        System.out.println(" (o>");
+        System.out.println(" //\\");
+        System.out.println(" V_/_");
+        select.selectAnimalBySpecies("bird");
         }
         }else if(n1==4){
             System.out.println("Do you want to see fish'a post?");
             String answer0=keyb.nextLine();
             String cevap3=keyb.nextLine();
         if(cevap3.equalsIgnoreCase("yes")){
+            System.out.println("  ><(((º>");
             select.selectAnimalBySpecies("fish");
         }}
         return true;

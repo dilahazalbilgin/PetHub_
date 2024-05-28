@@ -53,6 +53,7 @@ public class Animal_WantingTo_Own extends User{
         System.out.println("       /         O");
         System.out.println("      /   (_____/");
         System.out.println("     /_____/ U");
+                System.out.println(" ");
         select.selectPostBySpecies("dog");
             }             
         }else if(n1==2){
@@ -63,6 +64,7 @@ public class Animal_WantingTo_Own extends User{
         System.out.println("      /\\_/\\");
         System.out.println("     ( o.o )");
         System.out.println("      > ^ <");
+        System.out.println(" ");
         select.selectPostBySpecies("cat");
         }
         }else if(n1==3){
@@ -74,6 +76,7 @@ public class Animal_WantingTo_Own extends User{
         System.out.println(" (o>");
         System.out.println(" //\\");
         System.out.println(" V_/_");
+        System.out.println(" ");
         select.selectPostBySpecies("bird");
         }
         }else if(n1==4){
@@ -82,6 +85,7 @@ public class Animal_WantingTo_Own extends User{
             String cevap3=keyb.nextLine();
         if(cevap3.equalsIgnoreCase("yes")){
             System.out.println("  ><(((º>");
+            System.out.println(" ");
             select.selectPostBySpecies("fish");
         }}
         return true;

@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Abstract class
 public abstract class Animals {
     private Dog Dog;
     private Cat Cat;
@@ -18,6 +19,7 @@ public abstract class Animals {
         this.name=name;
         this.animalSpecies = animalSpecies;
         this.animalAge = animalAge;
+        //ArrayList
         pets=new ArrayList<>();
        List<Gendered> pets = new ArrayList<>();     
     }
@@ -44,7 +46,7 @@ public abstract class Animals {
         System.out.println("What is the species of the animal");
         String a=keyb.nextLine();
         String species=keyb.nextLine();
-        System.out.println("Can it mate");
+        System.out.println("Can it reproductive?");
         String reproductive=keyb.nextLine();
         System.out.println("What is the gender of the animal");
         String gender=keyb.nextLine();
@@ -58,13 +60,13 @@ public abstract class Animals {
         System.out.println("Animal Species: " +animalSpecies);
         System.out.println("Animal age: " +animalAge);
         pets.add(new Dog(name, animalAge, animalSpecies, "gender", reproductive));
-
-        /*for (Gendered pet : pets) {
+        
+        for (Gendered pet : pets) {
             pet.setGender("Female");
             pet.setReproductive(true);
             System.out.println("Pet gender: " + pet.getGender());
             System.out.println("Is reproductive: " + pet.isReproductive());
-        } */
+        } 
         System.out.println(Dog);
         System.out.println(Cat);
         System.out.println(Fish);
@@ -72,6 +74,7 @@ public abstract class Animals {
         
     }
     
+    //Abstract Method
     public abstract void MakeSound();
     
     public void InitializePets() {

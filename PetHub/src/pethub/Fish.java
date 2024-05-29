@@ -3,6 +3,7 @@ public class Fish extends Animals implements Gendered{
     private String gender;
     private boolean reproductive;
     
+   //Inheritance 
     public Fish(String name, int animalAge,String animalSpecies, String gender, boolean reproductive) {
         super(name, animalSpecies, animalAge);
         this.gender = gender;

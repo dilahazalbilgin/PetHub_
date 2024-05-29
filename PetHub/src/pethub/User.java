@@ -11,7 +11,7 @@ public class User {
         this.surname = surname;
         this.phoneNumber = phoneNumber;       
     }          
-    
+        //User Information
         public void Information(){
         System.out.println("Your name: " + name);
         System.out.println("Your surname: " + surname);

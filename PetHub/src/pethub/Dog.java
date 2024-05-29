@@ -2,6 +2,7 @@ package pethub;
 
 import java.util.Scanner;
 
+//Inheritance
 public class Dog extends Animals implements Gendered {
     private String gender;
     private boolean reproductive;

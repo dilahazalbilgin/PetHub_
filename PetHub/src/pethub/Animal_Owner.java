@@ -16,6 +16,7 @@ public class Animal_Owner extends User {
     }
 
     public static boolean AddPost() {
+        //Sql Connection
         DataBaseOperation newPost = new DataBaseOperation();
         DataBaseOperation selectPost = new DataBaseOperation();
         Scanner keyb = new Scanner(System.in);
@@ -59,9 +60,18 @@ public class Animal_Owner extends User {
         }
         return true;
     }
+    //Overload
+    public static boolean Post(String answer1){
+        if(answer1.equalsIgnoreCase("no")){
+            System.out.println("You don't add a post");
+        }
+        return false;
+    }
 
+    //Override
     @Override
     public void Information() {
+        //Composition
         super.Information();
         System.out.println(Dog);
         System.out.println(Cat);

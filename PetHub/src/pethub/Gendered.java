@@ -1,4 +1,5 @@
 package pethub;
+//Interface
 public interface Gendered {
     String getGender();
     

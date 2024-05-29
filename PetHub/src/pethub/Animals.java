@@ -59,8 +59,8 @@ public abstract class Animals {
     public void AnimalInformation(){
         System.out.println("Animal Species: " +animalSpecies);
         System.out.println("Animal age: " +animalAge);
+        //Interface       
         pets.add(new Dog(name, animalAge, animalSpecies, "gender", reproductive));
-        
         for (Gendered pet : pets) {
             pet.setGender("Female");
             pet.setReproductive(true);

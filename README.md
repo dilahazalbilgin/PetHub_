@@ -8,6 +8,6 @@
 ## Developers
 - [@dilahazalbilgin](https://github.com/dilahazalbilgin)
 - [@ecesariyerr](https://github.com/ecesariyerr)
-## UML DİAGRAM
+## UML Diagram
 ![uml diagram](https://github.com/dilahazalbilgin/PetHub_/assets/119621736/176dd749-5add-4258-9610-819772d04f78)
 

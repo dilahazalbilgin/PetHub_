@@ -8,3 +8,4 @@
 ## Developers
 - [@dilahazalbilgin](https://github.com/dilahazalbilgin)
 - [@ecesariyerr](https://github.com/ecesariyerr)
+##UML DİAGRAM

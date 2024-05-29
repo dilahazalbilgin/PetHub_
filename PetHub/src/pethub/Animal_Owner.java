@@ -60,7 +60,7 @@ public class Animal_Owner extends User {
         }
         return true;
     }
-    //Overload
+    //Overloading
     public static boolean Post(String answer1){
         if(answer1.equalsIgnoreCase("no")){
             System.out.println("You don't add a post");

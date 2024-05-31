@@ -14,7 +14,7 @@ public class LogIn {
     static int numberOfEntries = 3;
     static Map<String, String> userDatabase = new HashMap<>();
     
-    //Sql connection
+    //Sql connection 
     public static void SignUp(Scanner scanner) { 
         DataBaseOperation newUser=new DataBaseOperation();
         System.out.println("Please enter the name");

@@ -34,7 +34,7 @@ public class Animal_WantingTo_Own extends User{
             System.out.println("your animals: " + a2);
         }else{System.out.println("First animalll");}
         System.out.println("Your gender is: " +gender);
-        System.out.println("Your location is"+location);
+        System.out.println("Your location is: "+location);
         return true;
     }   
         public static boolean WantsAnimal(){

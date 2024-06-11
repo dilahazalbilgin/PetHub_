@@ -105,36 +105,6 @@ public class Animal_WantingTo_Own extends User{
     public void setPetNumber(int petNumber) {
         this.petNumber = petNumber;
     }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getSurname() {
-        return surname;
-    }
-
-    @Override
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    @Override
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    @Override
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
     
     public Dog getDog() {
         return Dog;

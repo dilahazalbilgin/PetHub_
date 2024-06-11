@@ -78,36 +78,4 @@ public class Animal_Owner extends User {
         System.out.println(Fish);
         System.out.println(Bird);
     }
-
-    public Cat getCat() {
-        return Cat;
-    }
-
-    public void setCat(Cat Cat) {
-        this.Cat = Cat;
-    }
-
-    public Fish getFish() {
-        return Fish;
-    }
-
-    public void setFish(Fish Fish) {
-        this.Fish = Fish;
-    }
-
-    public Bird getBird() {
-        return Bird;
-    }
-
-    public void setBird(Bird Bird) {
-        this.Bird = Bird;
-    }
-
-    public Dog getDog() {
-        return Dog;
-    }
-
-    public void setDog(Dog Dog) {
-        this.Dog = Dog;
-    }
 }

@@ -80,31 +80,6 @@ public abstract class Animals {
         }
     }
   
-    public String getAnimalSpecies() {
-        return animalSpecies;
-    }
-
-    public void setAnimalSpecies(String animalSpecies) {
-        this.animalSpecies = animalSpecies;
-    }
-
-    public int getAnimalAge() {
-        return animalAge;
-    }
-
-    public void setAnimalAge(int animalAge) {
-        this.animalAge = animalAge;
-    }
-
-
-    public boolean isReproductive() {
-        return reproductive;
-    }
-
-    public void setReproductive(boolean reproductive) {
-        this.reproductive = reproductive;
-    }
-
     
 }
  

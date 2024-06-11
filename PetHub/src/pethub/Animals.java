@@ -5,10 +5,6 @@ import java.util.Scanner;
 
 //Abstract class
 public abstract class Animals {
-    private Dog Dog;
-    private Cat Cat;
-    private Fish Fish;
-    private Bird Bird;
     private List<Gendered> pets;
     protected String name;
     protected String animalSpecies;
@@ -67,11 +63,6 @@ public abstract class Animals {
             System.out.println("Pet gender: " + pet.getGender());
             System.out.println("Is reproductive: " + pet.isReproductive());
         } 
-        System.out.println(Dog);
-        System.out.println(Cat);
-        System.out.println(Fish);
-        System.out.println(Bird);
-        
     }
     
     //Abstract Method

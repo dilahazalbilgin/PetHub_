@@ -17,9 +17,7 @@ public class User {
         System.out.println("Your surname: " + surname);
         System.out.println("Your phone number: " + phoneNumber);
     }
-        public static User createAccount(String name, String surname, long phoneNumber) {
-        return new User(name, surname, phoneNumber);
-    }
+
     
     public String getName() {
         return name;

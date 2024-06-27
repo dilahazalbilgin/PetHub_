@@ -62,12 +62,16 @@ public class LogIn {
                             System.out.println("1-Add Info\n2-Want Animal");
                             int enter1 = scanner.nextInt();
                             scanner.nextLine(); 
-                            if (enter1 == 1) {
-                                Animal_WantingTo_Own.AddInfo();
-                            } else if (enter1 == 2) {
-                                Animal_WantingTo_Own.WantsAnimal();
-                            } else {
-                                System.out.println("Please press 1 or 2");
+                            switch (enter1) {
+                                case 1:
+                                    Animal_WantingTo_Own.AddInfo();
+                                    break;
+                                case 2:
+                                    Animal_WantingTo_Own.WantsAnimal();
+                                    break;
+                                default:
+                                    System.out.println("Please press 1 or 2");
+                                    break;
                             }
                         }
                         break;
